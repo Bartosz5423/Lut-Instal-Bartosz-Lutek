@@ -1,444 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="LUT INSTAL – profesjonalne usługi elektryczne, instalacje, oświetlenie ogrodowe i modernizacje.">
-<title>LUT INSTAL — Usługi elektryczne</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LUT INSTAL | Usługi elektryczne</title>
+
+<meta name="description" content="LUT INSTAL - profesjonalne usługi elektryczne, instalacje, oświetlenie ogrodowe, modernizacje i przyłącza.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-  box-sizing:border-box;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 html{
-  scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-  margin:0;
-  font-family:Inter,Arial,sans-serif;
-  color:#111c31;
-  background:#fff;
+    font-family:Inter,Arial,sans-serif;
+    color:#101b30;
+    background:#fff;
 }
 
 a{
-  text-decoration:none;
-  color:inherit;
+    text-decoration:none;
+    color:inherit;
 }
 
 .container{
-  width:min(1180px,calc(100% - 48px));
-  margin:auto;
+    width:min(1180px,calc(100% - 40px));
+    margin:auto;
 }
 
 /* =========================
-   NAVIGACJA
+   MENU
 ========================= */
 
-.header{
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  z-index:10;
-  background:rgba(5,17,35,.88);
-  backdrop-filter:blur(12px);
-  border-radius:0 0 14px 14px;
-  color:#fff;
+header{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:100;
+    background:rgba(5,16,32,.88);
+    backdrop-filter:blur(15px);
 }
 
 .nav{
-  height:80px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+    height:82px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.brand{
-  display:flex;
-  gap:12px;
-  align-items:center;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:white;
 }
 
-.brand .bolt{
-  font-size:42px;
-  line-height:1;
-  transform:skew(-12deg);
-  color:#fff;
+.logo-icon{
+    font-size:43px;
+    transform:skew(-12deg);
+    color:#fff;
 }
 
-.brand strong{
-  font-size:22px;
-  letter-spacing:-.5px;
-  display:block;
+.logo strong{
+    display:block;
+    font-size:22px;
+    letter-spacing:-.5px;
 }
 
-.brand small{
-  font-size:8px;
-  letter-spacing:2px;
-  opacity:.7;
+.logo small{
+    display:block;
+    font-size:8px;
+    letter-spacing:2px;
+    opacity:.7;
 }
 
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:28px;
-  font-size:13px;
-  font-weight:600;
+nav{
+    display:flex;
+    align-items:center;
+    gap:28px;
+    color:white;
+    font-size:13px;
+    font-weight:600;
 }
 
-.nav-links a{
-  opacity:.9;
+nav a{
+    transition:.2s;
 }
 
-.nav-links .active{
-  color:#1680ff;
-  border-bottom:2px solid #1680ff;
-  padding:29px 0;
-}
-
-.nav-phone{
-  background:#0878ff;
-  color:#fff;
-  padding:13px 20px;
-  border-radius:10px;
-  box-shadow:0 10px 25px rgba(0,119,255,.25);
-}
-
-.menu-btn{
-  display:none;
-  background:none;
-  border:0;
-  color:#fff;
-  font-size:26px;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-  min-height:700px;
-  position:relative;
-  background:#061225;
-  color:#fff;
-  overflow:hidden;
-}
-
-.hero-bg{
-  position:absolute;
-  inset:0;
-
-  background:
-    linear-gradient(
-      90deg,
-      #061225 0%,
-      rgba(6,18,37,.95) 35%,
-      rgba(6,18,37,.25) 75%
-    ),
-    url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85")
-    center/cover;
-}
-
-.hero-content{
-  position:relative;
-  padding-top:170px;
-}
-
-.hero-copy{
-  max-width:680px;
-}
-
-.eyebrow{
-  font-size:11px;
-  font-weight:700;
-  letter-spacing:2.5px;
-  color:#fff;
-  display:flex;
-  gap:14px;
-  align-items:center;
-}
-
-.eyebrow i{
-  display:block;
-  width:30px;
-  height:2px;
-  background:#0878ff;
-}
-
-.hero h1{
-  font-size:62px;
-  line-height:1.02;
-  letter-spacing:-2.5px;
-  margin:22px 0 16px;
-}
-
-.hero h1 span{
-  font-weight:800;
-}
-
-.hero p{
-  font-size:18px;
-  line-height:1.5;
-  color:#d1d8e3;
-  max-width:620px;
-}
-
-.actions{
-  display:flex;
-  gap:14px;
-  margin:30px 0;
-}
-
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  border-radius:11px;
-  padding:15px 24px;
-  font-weight:700;
-  border:1px solid transparent;
-  transition:.25s;
-}
-
-.btn:hover{
-  transform:translateY(-2px);
-}
-
-.btn.primary{
-  background:#0878ff;
-  color:#fff;
-  box-shadow:0 10px 25px rgba(0,119,255,.25);
-}
-
-.btn.primary b{
-  font-size:15px;
-}
-
-.btn.ghost{
-  border-color:#fff;
-  color:#fff;
-}
-
-.trust{
-  display:flex;
-  gap:45px;
-  margin-top:30px;
-}
-
-.trust div{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  font-size:13px;
-  font-weight:600;
-}
-
-.trust b{
-  width:36px;
-  height:36px;
-  border:1px solid #0878ff;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  color:#0878ff;
-  font-size:17px;
-}
-
-/* =========================
-   SEKCJE
-========================= */
-
-.section{
-  padding:85px 0;
-}
-
-.section-head{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
-  align-items:end;
-  margin-bottom:35px;
-}
-
-.section h2,
-.why h2,
-.contact h2{
-  font-size:40px;
-  line-height:1.1;
-  letter-spacing:-1.5px;
-  margin:14px 0;
-}
-
-.section-head p{
-  color:#69758a;
-  line-height:1.6;
-}
-
-.eyebrow.dark{
-  color:#122039;
-}
-
-/* =========================
-   USŁUGI
-========================= */
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-}
-
-.card{
-  position:relative;
-  padding:28px;
-  background:#fff;
-  border:1px solid #edf0f5;
-  border-radius:15px;
-  box-shadow:0 8px 30px rgba(16,35,65,.07);
-  min-height:205px;
-  transition:.25s;
-}
-
-.card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 15px 35px rgba(16,35,65,.12);
-}
-
-.icon{
-  font-size:31px;
-  color:#0878ff;
-  margin-bottom:17px;
-}
-
-.card h3{
-  font-size:16px;
-  margin:0 0 9px;
-}
-
-.card p{
-  color:#68758a;
-  font-size:13px;
-  line-height:1.5;
-  max-width:280px;
-}
-
-.card>a{
-  position:absolute;
-  right:18px;
-  bottom:18px;
-  border:2px solid #0878ff;
-  color:#0878ff;
-  width:29px;
-  height:29px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  font-weight:800;
-}
-
-/* =========================
-   DLACZE MY
-========================= */
-
-.why{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  background:#061225;
-  color:#fff;
-}
-
-.why-image{
-  min-height:540px;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(6,18,37,.05),
-      rgba(6,18,37,.05)
-    ),
-    url("https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1100&q=85")
-    center/cover;
-}
-
-.why-copy{
-  padding:75px 7vw;
-}
-
-.why-copy p{
-  color:#b8c1ce;
-  line-height:1.6;
-  max-width:540px;
-}
-
-.why ul{
-  list-style:none;
-  padding:0;
-  margin:25px 0;
-}
-
-.why li{
-  margin:13px 0;
-  color:#1680ff;
-  font-weight:800;
-}
-
-.why li span{
-  color:#fff;
-  font-weight:500;
-  margin-left:9px;
-}
-
-/* =========================
-   REALIZACJE
-========================= */
-
-.projects h2{
-  margin:12px 0 30px;
-}
-
-.gallery{
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr;
-  grid-template-rows:220px 220px;
-  gap:12px;
-}
-
-.photo{
-  border-radius:13px;
-  background-size:cover;
-  background-position:center;
-  position:relative;
-  overflow:hidden;
-}
-
-.photo:after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    transparent 45%,
-    rgba(0,0,0,.65)
-  );
-}
-
-.photo span{
-  position:absolute;
-  z-index:1;
-  bottom:15px;
-  left:16px;
-  color:#fff;
-  font-weight:700;
-  font-size:13px;
-}
-
-.p1{
-  grid-row:span 2;
-
-  background-image
+nav a
