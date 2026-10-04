@@ -1,104 +1,749 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LUT INSTAL - profesjonalne usługi elektryczne. Instalacje, modernizacje, oświetlenie i szybki serwis.">
+  <title>LUT INSTAL | Usługi elektryczne</title>
 
-<title>LUT INSTAL | Usługi elektryczne</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<meta name="description" content="LUT INSTAL - profesjonalne usługi elektryczne, instalacje, oświetlenie ogrodowe, modernizacje i przyłącza.">
+  <style>
+    :root {
+      --navy: #07111f;
+      --navy-2: #0b1d31;
+      --blue: #1688ff;
+      --blue-2: #55b7ff;
+      --white: #ffffff;
+      --text: #182333;
+      --muted: #667085;
+      --line: #e7edf4;
+      --light: #f5f8fc;
+      --shadow: 0 20px 60px rgba(7, 17, 31, .12);
+      --radius: 22px;
+    }
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    html {
+      scroll-behavior: smooth;
+    }
 
-<style>
+    body {
+      font-family: Inter, Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-html{
-    scroll-behavior:smooth;
-}
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
 
-body{
-    font-family:Inter,Arial,sans-serif;
-    color:#101b30;
-    background:#fff;
-}
+    .topbar {
+      background: #050c15;
+      color: #dce8f5;
+      font-size: 13px;
+    }
 
-a{
-    text-decoration:none;
-    color:inherit;
-}
+    .topbar-inner {
+      min-height: 38px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
 
-.container{
-    width:min(1180px,calc(100% - 40px));
-    margin:auto;
-}
+    .topbar a {
+      color: #fff;
+      font-weight: 700;
+    }
 
-/* =========================
-   MENU
-========================= */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7, 17, 31, .92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+    }
 
-header{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:100;
-    background:rgba(5,16,32,.88);
-    backdrop-filter:blur(15px);
-}
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
 
-.nav{
-    height:82px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
+    .logo {
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+    }
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    color:white;
-}
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--blue), var(--blue-2));
+      color: #fff;
+      font-size: 22px;
+      box-shadow: 0 10px 30px rgba(22, 136, 255, .3);
+    }
 
-.logo-icon{
-    font-size:43px;
-    transform:skew(-12deg);
-    color:#fff;
-}
+    .logo-text strong {
+      display: block;
+      font-size: 20px;
+      letter-spacing: 1px;
+      line-height: 1;
+    }
 
-.logo strong{
-    display:block;
-    font-size:22px;
-    letter-spacing:-.5px;
-}
+    .logo-text span {
+      display: block;
+      margin-top: 4px;
+      color: #9eb1c6;
+      font-size: 9px;
+      letter-spacing: 2.5px;
+    }
 
-.logo small{
-    display:block;
-    font-size:8px;
-    letter-spacing:2px;
-    opacity:.7;
-}
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      color: #dce8f5;
+      font-size: 14px;
+      font-weight: 600;
+    }
 
-nav{
-    display:flex;
-    align-items:center;
-    gap:28px;
-    color:white;
-    font-size:13px;
-    font-weight:600;
-}
+    nav a {
+      transition: .2s ease;
+    }
 
-nav a{
-    transition:.2s;
-}
+    nav a:hover {
+      color: #63baff;
+    }
 
-nav a
+    .nav-cta {
+      padding: 12px 18px;
+      border-radius: 12px;
+      background: var(--blue);
+      color: #fff !important;
+    }
+
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: #fff;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(4, 13, 25, .94) 0%,
+          rgba(4, 13, 25, .76) 48%,
+          rgba(4, 13, 25, .34) 100%
+        ),
+        url("https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 110px;
+      background: linear-gradient(transparent, #fff);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 100px 0 130px;
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: #74c3ff;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: var(--blue);
+    }
+
+    h1 {
+      font-size: clamp(44px, 7vw, 78px);
+      line-height: .98;
+      letter-spacing: -3px;
+      margin-bottom: 24px;
+    }
+
+    h1 span {
+      color: #53b4ff;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #d8e3ef;
+      font-size: 18px;
+      margin-bottom: 34px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 50px;
+      padding: 0 22px;
+      border-radius: 13px;
+      font-weight: 800;
+      font-size: 14px;
+      transition: .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: #fff;
+      box-shadow: 0 12px 30px rgba(22, 136, 255, .28);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255, 255, 255, .24);
+      color: #fff;
+      background: rgba(255, 255, 255, .06);
+    }
+
+    section {
+      padding: 95px 0;
+    }
+
+    .section-head {
+      max-width: 700px;
+      margin-bottom: 46px;
+    }
+
+    .section-kicker {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.05;
+      letter-spacing: -1.8px;
+      margin-bottom: 14px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+    }
+
+    .services {
+      background: #fff;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 30px;
+      background: #fff;
+      box-shadow: 0 8px 35px rgba(7, 17, 31, .05);
+      transition: .25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: #cfe6fa;
+    }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 15px;
+      display: grid;
+      place-items: center;
+      background: #eaf5ff;
+      color: var(--blue);
+      font-size: 25px;
+      margin-bottom: 22px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 9px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .about {
+      background: var(--light);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-photo {
+      min-height: 500px;
+      border-radius: 28px;
+      background:
+        linear-gradient(180deg, rgba(7, 17, 31, .05), rgba(7, 17, 31, .38)),
+        url("https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1200&q=85")
+        center/cover;
+      box-shadow: var(--shadow);
+    }
+
+    .checks {
+      display: grid;
+      gap: 15px;
+      margin-top: 28px;
+    }
+
+    .check {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .check b {
+      width: 27px;
+      height: 27px;
+      flex: 0 0 27px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #dff2ff;
+      color: var(--blue);
+      font-size: 14px;
+    }
+
+    .check div {
+      color: #536071;
+      font-size: 14px;
+    }
+
+    .check strong {
+      display: block;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .stats {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .stat {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 25px;
+      color: var(--blue);
+    }
+
+    .stat span {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr .85fr;
+      grid-template-rows: 220px 220px;
+      gap: 15px;
+    }
+
+    .gallery-item {
+      border-radius: 20px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .gallery-item:nth-child(1) {
+      grid-row: span 2;
+      background-image: url("https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=85");
+    }
+
+    .gallery-item:nth-child(2) {
+      background-image: url("https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=85");
+    }
+
+    .gallery-item:nth-child(3) {
+      background-image: url("https://images.unsplash.com/photo-1581092919535-7146ff9f2b7d?auto=format&fit=crop&w=900&q=85");
+    }
+
+    .gallery-item:nth-child(4) {
+      background-image: url("https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=85");
+    }
+
+    .gallery-item:nth-child(5) {
+      background-image: url("https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=900&q=85");
+    }
+
+    .contact {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .contact-box {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .contact h2 {
+      color: #fff;
+    }
+
+    .contact p {
+      color: #aebdce;
+      max-width: 620px;
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 13px;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, .04);
+    }
+
+    .contact-link .icon {
+      margin: 0;
+      width: 42px;
+      height: 42px;
+      font-size: 19px;
+    }
+
+    .contact-link small {
+      display: block;
+      color: #91a4b9;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .contact-link strong {
+      color: #fff;
+    }
+
+    footer {
+      background: #040a12;
+      color: #7f90a4;
+      padding: 25px 0;
+      font-size: 12px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .mobile-nav {
+      display: none;
+      position: absolute;
+      top: 78px;
+      left: 0;
+      right: 0;
+      background: #07111f;
+      padding: 18px 20px 25px;
+      border-top: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .mobile-nav a {
+      display: block;
+      padding: 13px 0;
+      color: #fff;
+      border-bottom: 1px solid rgba(255, 255, 255, .07);
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        display: none;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-grid,
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .about-photo {
+        min-height: 380px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 250px 180px 180px;
+      }
+
+      .gallery-item:nth-child(1) {
+        grid-row: span 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .topbar-inner {
+        justify-content: center;
+        min-height: 34px;
+      }
+
+      .topbar-inner span {
+        display: none;
+      }
+
+      .nav {
+        min-height: 70px;
+      }
+
+      .mobile-nav {
+        top: 70px;
+      }
+
+      .hero {
+        min-height: 650px;
+      }
+
+      .hero-content {
+        padding: 90px 0 120px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      .stat {
+        padding: 14px 10px;
+      }
+
+      .stat strong {
+        font-size: 20px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 190px 140px 140px;
+      }
+
+      .gallery-item:nth-child(1) {
+        grid-column: span 2;
+      }
+
+      .contact-box {
+        gap: 30px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Profesjonalne usługi elektryczne</span>
+      <a href="tel:+48787672404">☎ 787 672 404</a>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+
+      <a class="logo" href="#start">
+        <span class="logo-mark">⚡</span>
+
+        <span class="logo-text">
+          <strong>LUT INSTAL</strong>
+          <span>USŁUGI ELEKTRYCZNE</span>
+        </span>
+      </a>
+
+      <nav>
+        <a href="#uslugi">Usługi</a>
+        <a href="#onas">O nas</a>
+        <a href="#realizacje">Realizacje</a>
+        <a href="#kontakt" class="nav-cta">Kontakt</a>
+      </nav>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Otwórz menu">
+        ☰
+      </button>
+
+    </div>
+
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#uslugi">Usługi</a>
+      <a href="#onas">O nas</a>
+      <a href="#realizacje">Realizacje</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="start">
+
+      <div class="container hero-content">
+
+        <div class="eyebrow">
+          LUT INSTAL • ELEKTRYKA
+        </div>
+
+        <h1>
+          Prąd pod kontrolą.<br>
+          <span>Instalacje bez kompromisów.</span>
+        </h1>
+
+        <p>
+          Wykonujemy instalacje elektryczne, modernizacje,
+          oświetlenie i prace serwisowe.
+          Solidnie, estetycznie i zgodnie ze sztuką.
+        </p>
+
+        <div class="buttons">
+
+          <a class="btn btn-primary" href="tel:+48787672404">
+            ☎ Zadzwoń: 787 672 404
+          </a>
+
+          <a class="btn btn-secondary" href="#uslugi">
+            Zobacz usługi ↓
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="services" id="uslugi">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <div class="section-kicker">
+            Oferta
+          </div>
+
+          <h2>
+            Kompleksowe usługi elektryczne
+          </h2>
+
+          <p>
+            Od pojedynczego punkt
