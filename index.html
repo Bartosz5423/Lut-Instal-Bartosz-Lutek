@@ -1,1159 +1,1686 @@
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="LUT INSTAL - profesjonalne usługi elektryczne. Instalacje, modernizacje, oświetlenie, rozdzielnice, serwis i awarie.">
-
+<meta name="description" content="LUT INSTAL - profesjonalne usługi elektryczne. Instalacje, modernizacje, oświetlenie, rozdzielnice i serwis.">
 <meta name="theme-color" content="#06101d">
-
 <title>LUT INSTAL | Usługi elektryczne</title>
 
 <style>
-
-/* =====================================================
-   LUT INSTAL - PEŁNA STRONA
-   CZĘŚĆ 1 / 3
-   ===================================================== */
-
 :root{
-    --navy:#06101d;
-    --navy2:#0a192b;
-    --navy3:#10263e;
-
-    --blue:#168cff;
-    --blue2:#48b1ff;
-    --blue3:#0870d4;
-
-    --white:#ffffff;
-    --black:#02070d;
-
-    --text:#172334;
-    --muted:#687789;
-
-    --light:#f4f7fb;
-    --light2:#edf3f8;
-
-    --border:#dfe7ef;
-
-    --green:#20c77a;
-
-    --shadow:0 20px 60px rgba(7,17,31,.12);
-
-    --radius:22px;
+--navy:#06101d;
+--navy2:#0b1b2d;
+--blue:#168cff;
+--blue2:#55b8ff;
+--white:#fff;
+--text:#172334;
+--muted:#687789;
+--light:#f4f7fb;
+--border:#dfe7ef;
+--green:#20c77a;
+--shadow:0 20px 60px rgba(7,17,31,.12);
+--radius:22px
 }
 
+*{box-sizing:border-box;margin:0;padding:0}
 
-/* RESET */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
-    margin:0;
-    font-family:Arial,Helvetica,sans-serif;
-    color:var(--text);
-    background:#fff;
-    line-height:1.6;
-    overflow-x:hidden;
+font-family:Arial,Helvetica,sans-serif;
+color:var(--text);
+background:#fff;
+line-height:1.5
 }
 
-body.menu-open{
-    overflow:hidden;
-}
-
-a{
-    color:inherit;
-    text-decoration:none;
-}
-
-button{
-    font-family:inherit;
-}
-
-img{
-    max-width:100%;
-    display:block;
-}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
 
 .container{
-    width:min(1180px,calc(100% - 32px));
-    margin:0 auto;
+width:min(1180px,calc(100% - 36px));
+margin:auto
 }
 
+section{padding:90px 0}
 
-/* =====================================================
-   GÓRNA BELKA
-   ===================================================== */
+/* TOP */
 
 .topbar{
-    background:#030912;
-    color:#b9c9d9;
-    font-size:13px;
+background:#02070d;
+color:#aebed0;
+font-size:13px
 }
 
 .topbar-inner{
-    min-height:38px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-}
-
-.topbar-right{
-    display:flex;
-    align-items:center;
-    gap:20px;
+min-height:38px;
+display:flex;
+justify-content:space-between;
+align-items:center
 }
 
 .topbar a{
-    color:#fff;
-    font-weight:800;
+color:#fff;
+font-weight:800
 }
 
-.top-dot{
-    width:7px;
-    height:7px;
-    border-radius:50%;
-    background:var(--green);
-    display:inline-block;
-    margin-right:6px;
-}
-
-
-/* =====================================================
-   HEADER
-   ===================================================== */
+/* HEADER */
 
 header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-
-    background:rgba(6,16,29,.96);
-
-    border-bottom:1px solid rgba(255,255,255,.08);
-
-    backdrop-filter:blur(18px);
+position:sticky;
+top:0;
+z-index:50;
+background:rgba(6,16,29,.96);
+backdrop-filter:blur(12px);
+color:#fff;
+border-bottom:1px solid rgba(255,255,255,.08)
 }
 
-.nav{
-    min-height:78px;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    gap:30px;
+.header-inner{
+height:76px;
+display:flex;
+align-items:center;
+justify-content:space-between
 }
-
-
-/* LOGO */
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    color:#fff;
+font-size:24px;
+font-weight:900;
+letter-spacing:.04em
 }
 
-.logo-symbol{
-    width:48px;
-    height:48px;
+.logo strong{color:#fff}
+.logo span{color:var(--blue)}
 
-    border-radius:14px;
-
-    display:grid;
-    place-items:center;
-
-    font-size:27px;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--blue),
-            var(--blue2)
-        );
-
-    box-shadow:
-        0 10px 30px rgba(22,140,255,.35);
+.desktop-nav{
+display:flex;
+gap:26px;
+align-items:center
 }
 
-.logo-title{
-    font-size:21px;
-    line-height:1;
-
-    font-weight:900;
-
-    letter-spacing:1px;
+.desktop-nav a{
+font-size:14px;
+color:#c8d4df;
+font-weight:700
 }
 
-.logo-subtitle{
-    margin-top:5px;
+.desktop-nav a:hover{color:#fff}
 
-    color:#8da2b8;
-
-    font-size:9px;
-
-    letter-spacing:3px;
-
-    font-weight:700;
+.menu-toggle{
+display:none;
+border:0;
+background:none;
+width:42px;
+height:42px;
+cursor:pointer;
+flex-direction:column;
+justify-content:center;
+gap:5px
 }
 
-
-/* DESKTOP MENU */
-
-.desktop-menu{
-    display:flex;
-    align-items:center;
-
-    gap:27px;
-
-    color:#dbe7f3;
-
-    font-size:14px;
-    font-weight:700;
+.menu-toggle span{
+display:block;
+width:24px;
+height:2px;
+background:#fff;
+margin:auto
 }
-
-.desktop-menu a{
-    transition:.2s ease;
-}
-
-.desktop-menu a:hover{
-    color:#61bdff;
-}
-
-.menu-phone{
-    padding:12px 19px;
-
-    border-radius:11px;
-
-    background:var(--blue);
-
-    color:#fff !important;
-
-    box-shadow:
-        0 8px 22px rgba(22,140,255,.25);
-}
-
-
-/* MOBILE BUTTON */
-
-.mobile-button{
-    display:none;
-
-    width:46px;
-    height:46px;
-
-    border:0;
-    border-radius:12px;
-
-    background:rgba(255,255,255,.08);
-
-    color:#fff;
-
-    font-size:27px;
-
-    cursor:pointer;
-}
-
-
-/* MOBILE MENU */
 
 .mobile-menu{
-    display:none;
-
-    background:#06101d;
-
-    border-top:1px solid rgba(255,255,255,.08);
-
-    padding:8px 20px 22px;
+display:none;
+padding:10px 18px 22px;
+border-top:1px solid rgba(255,255,255,.08)
 }
 
 .mobile-menu a{
-    display:block;
-
-    padding:14px 4px;
-
-    color:#fff;
-
-    font-weight:700;
-
-    border-bottom:1px solid rgba(255,255,255,.08);
+display:block;
+padding:14px 0;
+color:#fff;
+font-weight:700
 }
 
+.mobile-menu.active{display:block}
+.mobile-phone{color:#70c3ff!important}
 
-/* =====================================================
-   HERO
-   ===================================================== */
+/* HERO */
 
 .hero{
-    position:relative;
-
-    min-height:720px;
-
-    overflow:hidden;
-
-    color:#fff;
-
-    background:
-
-        radial-gradient(
-            circle at 85% 20%,
-            rgba(22,140,255,.25),
-            transparent 30%
-        ),
-
-        radial-gradient(
-            circle at 10% 85%,
-            rgba(22,140,255,.12),
-            transparent 28%
-        ),
-
-        linear-gradient(
-            135deg,
-            #030a13,
-            #071625 55%,
-            #06101d
-        );
+background:
+radial-gradient(circle at 85% 20%,rgba(22,140,255,.22),transparent 32%),
+linear-gradient(135deg,#06101d,#0a192b);
+color:#fff;
+padding:100px 0 90px;
+overflow:hidden
 }
 
 .hero-grid{
-    position:absolute;
-    inset:0;
-
-    opacity:.12;
-
-    background-image:
-
-        linear-gradient(
-            rgba(255,255,255,.08) 1px,
-            transparent 1px
-        ),
-
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,.08) 1px,
-            transparent 1px
-        );
-
-    background-size:55px 55px;
-
-    mask-image:
-        linear-gradient(
-            to bottom,
-            black,
-            transparent
-        );
+display:grid;
+grid-template-columns:1.05fr .95fr;
+gap:60px;
+align-items:center
 }
 
-.hero-circle{
-    position:absolute;
-
-    width:600px;
-    height:600px;
-
-    border-radius:50%;
-
-    right:-250px;
-    top:70px;
-
-    border:1px solid rgba(88,189,255,.15);
-
-    box-shadow:
-        0 0 0 70px rgba(88,189,255,.025),
-        0 0 0 140px rgba(88,189,255,.018);
+.eyebrow{
+display:flex;
+align-items:center;
+gap:10px;
+color:var(--blue);
+font-size:12px;
+font-weight:900;
+letter-spacing:.14em;
+margin-bottom:18px
 }
 
-.hero-content{
-    position:relative;
-
-    z-index:2;
-
-    padding:105px 0 110px;
-
-    display:grid;
-
-    grid-template-columns:1.08fr .92fr;
-
-    gap:70px;
-
-    align-items:center;
-}
-
-.hero-label{
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    color:#69bdff;
-
-    font-size:12px;
-
-    font-weight:900;
-
-    letter-spacing:2.2px;
-
-    text-transform:uppercase;
-
-    margin-bottom:20px;
-}
-
-.hero-label::before{
-    content:"";
-
-    width:32px;
-    height:2px;
-
-    background:var(--blue);
+.eyebrow span{
+width:28px;
+height:2px;
+background:var(--blue);
+display:block
 }
 
 .hero h1{
-    margin:0 0 25px;
-
-    font-size:clamp(45px,6vw,76px);
-
-    line-height:.98;
-
-    letter-spacing:-3px;
+font-size:clamp(42px,6vw,72px);
+line-height:1.02;
+letter-spacing:-.04em;
+margin-bottom:24px
 }
 
-.hero h1 span{
-    color:#4eb2ff;
+.hero h1 em,
+.section-head h2 em,
+.about-content h2 em{
+font-style:normal;
+color:var(--blue2)
 }
 
-.hero-description{
-    max-width:650px;
-
-    color:#c5d4e3;
-
-    font-size:18px;
-
-    margin-bottom:34px;
+.hero p{
+max-width:680px;
+color:#b9c7d5;
+font-size:18px;
+line-height:1.75;
+margin-bottom:30px
 }
 
 .hero-buttons{
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:13px;
+display:flex;
+gap:12px;
+flex-wrap:wrap
 }
 
 .btn{
-    min-height:52px;
-
-    padding:0 23px;
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:9px;
-
-    border-radius:13px;
-
-    font-size:14px;
-
-    font-weight:900;
-
-    transition:
-        transform .2s ease,
-        box-shadow .2s ease,
-        background .2s ease;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-height:50px;
+padding:0 22px;
+border-radius:13px;
+font-weight:900;
+border:1px solid transparent;
+transition:.2s;
+cursor:pointer
 }
 
-.btn:hover{
-    transform:translateY(-3px);
+.btn-primary{
+background:var(--blue);
+color:#fff
 }
 
-.btn-blue{
-    color:#fff;
-
-    background:var(--blue);
-
-    box-shadow:
-        0 12px 30px
-        rgba(22,140,255,.28);
-}
-
-.btn-blue:hover{
-    background:var(--blue3);
+.btn-primary:hover{
+transform:translateY(-2px);
+background:#0875d6
 }
 
 .btn-outline{
-    color:#fff;
-
-    border:1px solid
-        rgba(255,255,255,.22);
-
-    background:
-        rgba(255,255,255,.05);
+border-color:rgba(255,255,255,.28);
+color:#fff
 }
 
+.btn-outline:hover{
+background:#fff;
+color:var(--navy)
+}
 
-/* HERO KARTA */
+.btn-outline-light{
+border-color:rgba(255,255,255,.25);
+color:#fff
+}
 
-.hero-card{
-    padding:25px;
+.hero-note{
+margin-top:22px;
+color:#9fb1c2;
+font-size:13px
+}
 
-    border-radius:28px;
-
-    background:
-        rgba(255,255,255,.065);
-
-    border:1px solid
-        rgba(255,255,255,.13);
-
-    box-shadow:
-        0 30px 80px
-        rgba(0,0,0,.25);
-
-    backdrop-filter:blur(14px);
+.hero-note span{
+color:var(--green);
+font-weight:900;
+margin-right:7px
 }
 
 .hero-visual{
-    height:245px;
-
-    border-radius:21px;
-
-    display:grid;
-    place-items:center;
-
-    margin-bottom:22px;
-
-    background:
-
-        radial-gradient(
-            circle,
-            rgba(38,157,255,.28),
-            transparent 55%
-        ),
-
-        linear-gradient(
-            135deg,
-            #0c2944,
-            #07111f
-        );
-
-    border:1px solid
-        rgba(86,188,255,.16);
+min-height:480px;
+position:relative;
+display:grid;
+place-items:center
 }
 
-.hero-bolt{
-    width:125px;
-    height:125px;
+.hero-card{
+width:min(390px,90%);
+padding:34px;
+border:1px solid rgba(255,255,255,.14);
+border-radius:30px;
+background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.035));
+box-shadow:0 30px 80px rgba(0,0,0,.35);
+position:relative;
+z-index:2
+}
 
-    display:grid;
-    place-items:center;
+.card-top{
+display:flex;
+align-items:center;
+gap:10px;
+color:#b9c7d5;
+font-size:12px;
+font-weight:900;
+letter-spacing:.12em
+}
 
-    border-radius:34px;
+.status{
+width:9px;
+height:9px;
+border-radius:50%;
+background:var(--green);
+box-shadow:0 0 16px var(--green)
+}
 
-    font-size:70px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #128dff,
-            #68c8ff
-        );
-
-    box-shadow:
-        0 20px 55px
-        rgba(22,140,255,.38);
+.bolt{
+font-size:80px;
+line-height:1;
+margin:35px 0 15px
 }
 
 .hero-card h3{
-    font-size:21px;
-
-    margin-bottom:7px;
+font-size:38px;
+line-height:1.05;
+margin-bottom:14px
 }
 
 .hero-card p{
-    color:#9eb1c4;
-
-    font-size:14px;
+font-size:14px;
+line-height:1.7;
+margin:0;
+color:#aebed0
 }
 
-.hero-points{
-    margin-top:20px;
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:10px;
+.card-bottom{
+display:flex;
+justify-content:space-between;
+border-top:1px solid rgba(255,255,255,.1);
+margin-top:28px;
+padding-top:18px;
+font-size:11px;
+color:#8fa3b6
 }
 
-.hero-point{
-    padding:12px;
+.card-bottom strong{color:#fff}
 
-    border-radius:12px;
-
-    color:#dce8f4;
-
-    background:
-        rgba(255,255,255,.05);
-
-    font-size:12px;
-
-    font-weight:700;
+.float{
+position:absolute;
+z-index:3;
+background:#fff;
+color:var(--text);
+padding:15px 18px;
+border-radius:16px;
+box-shadow:0 18px 45px rgba(0,0,0,.25);
+font-size:12px;
+font-weight:800
 }
 
+.float strong{
+display:block;
+color:var(--blue);
+font-size:20px
+}
 
-/* =====================================================
-   TRUST BAR
-   ===================================================== */
+.float.one{
+top:70px;
+left:0
+}
+
+.float.two{
+right:0;
+bottom:70px
+}
+
+/* TRUST */
 
 .trust{
-    position:relative;
-
-    z-index:10;
-
-    margin-top:-42px;
+background:#fff;
+border-bottom:1px solid var(--border);
+border-top:1px solid var(--border)
 }
 
-.trust-box{
-    display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    background:#fff;
-
-    border:1px solid var(--border);
-
-    border-radius:20px;
-
-    padding:21px;
-
-    box-shadow:var(--shadow);
+.trust-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr)
 }
 
 .trust-item{
-    display:flex;
-
-    align-items:center;
-
-    gap:13px;
-
-    padding:5px 20px;
-
-    border-right:
-        1px solid var(--border);
+padding:25px;
+display:flex;
+gap:14px;
+align-items:center;
+border-right:1px solid var(--border)
 }
 
-.trust-item:last-child{
-    border-right:0;
-}
-
-.trust-icon{
-    width:44px;
-    height:44px;
-
-    flex-shrink:0;
-
-    display:grid;
-    place-items:center;
-
-    border-radius:13px;
-
-    background:#eaf5ff;
-
-    color:var(--blue);
-
-    font-size:20px;
-}
+.trust-item:last-child{border-right:0}
 
 .trust-item strong{
-    display:block;
-
-    font-size:14px;
+font-size:20px;
+color:var(--blue)
 }
 
 .trust-item span{
-    display:block;
-
-    color:var(--muted);
-
-    font-size:11px;
+font-size:12px;
+color:var(--muted);
+font-weight:700
 }
 
+/* SEKCJE */
 
-/* =====================================================
-   OGÓLNE SEKCJE
-   ===================================================== */
-
-section{
-    padding:100px 0;
+.section-head{
+display:flex;
+justify-content:space-between;
+gap:40px;
+align-items:end;
+margin-bottom:45px
 }
 
-.section-heading{
-    max-width:730px;
-
-    margin-bottom:48px;
+.section-head h2{
+font-size:clamp(32px,4vw,52px);
+line-height:1.05;
+letter-spacing:-.035em
 }
 
-.kicker{
-    margin-bottom:10px;
-
-    color:var(--blue);
-
-    font-size:12px;
-
-    font-weight:900;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
+.section-head>p{
+max-width:430px;
+color:var(--muted);
+line-height:1.8
 }
 
-.section-heading h2{
-    margin-bottom:15px;
+/* USŁUGI */
 
-    font-size:clamp(32px,5vw,49px);
-
-    line-height:1.05;
-
-    letter-spacing:-2px;
-}
-
-.section-heading p{
-    color:var(--muted);
-}
-
-
-/* =====================================================
-   USŁUGI
-   ===================================================== */
-
-.services{
-    background:#fff;
-}
+.services{background:#fff}
 
 .services-grid{
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:18px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px
 }
 
 .service-card{
-    position:relative;
-
-    overflow:hidden;
-
-    min-height:260px;
-
-    padding:30px;
-
-    border-radius:22px;
-
-    background:#fff;
-
-    border:1px solid var(--border);
-
-    transition:
-        transform .25s ease,
-        box-shadow .25s ease,
-        border .25s ease;
+padding:28px;
+border:1px solid var(--border);
+border-radius:var(--radius);
+position:relative;
+min-height:220px;
+transition:.25s;
+background:#fff
 }
 
 .service-card:hover{
-    transform:translateY(-7px);
-
-    border-color:#c9e4f8;
-
-    box-shadow:var(--shadow);
-}
-
-.service-number{
-    position:absolute;
-
-    right:22px;
-    top:18px;
-
-    color:#e9eef4;
-
-    font-size:32px;
-
-    font-weight:900;
+transform:translateY(-5px);
+box-shadow:var(--shadow);
+border-color:#bcdcff
 }
 
 .service-icon{
-    width:56px;
-    height:56px;
-
-    display:grid;
-    place-items:center;
-
-    margin-bottom:22px;
-
-    border-radius:16px;
-
-    color:var(--blue);
-
-    background:#eaf5ff;
-
-    font-size:25px;
+width:52px;
+height:52px;
+border-radius:15px;
+display:grid;
+place-items:center;
+background:#eaf5ff;
+color:var(--blue);
+font-size:24px;
+margin-bottom:20px
 }
 
 .service-card h3{
-    margin-bottom:10px;
-
-    font-size:20px;
+font-size:19px;
+margin-bottom:10px
 }
 
 .service-card p{
-    color:var(--muted);
-
-    font-size:14px;
+font-size:14px;
+color:var(--muted);
+line-height:1.7
 }
 
-.service-line{
-    width:45px;
-    height:3px;
-
-    margin-top:20px;
-
-    border-radius:10px;
-
-    background:var(--blue);
+.service-card>span{
+position:absolute;
+right:22px;
+bottom:18px;
+color:#dce5ee;
+font-size:28px;
+font-weight:900
 }
 
+/* O NAS */
 
-/* =====================================================
-   O NAS
-   ===================================================== */
-
-.about{
-    background:var(--light);
-}
+.about{background:var(--light)}
 
 .about-grid{
-    display:grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap:65px;
-
-    align-items:center;
+display:grid;
+grid-template-columns:.9fr 1.1fr;
+gap:70px;
+align-items:center
 }
 
 .about-visual{
-    position:relative;
-
-    min-height:550px;
-
-    overflow:hidden;
-
-    border-radius:28px;
-
-    background:
-
-        radial-gradient(
-            circle at 50% 25%,
-            rgba(79,177,255,.35),
-            transparent 25%
-        ),
-
-        linear-gradient(
-            145deg,
-            #0d2b47,
-            #050e19
-        );
-
-    box-shadow:var(--shadow);
+min-height:440px;
+border-radius:30px;
+background:linear-gradient(145deg,#06101d,#168cff);
+display:grid;
+place-items:center;
+box-shadow:var(--shadow);
+position:relative;
+overflow:hidden
 }
 
-.circuit-lines{
-    position:absolute;
-    inset:0;
-
-    opacity:.3;
-
-    background-image:
-
-        linear-gradient(
-            90deg,
-            transparent 49%,
-            rgba(86,188,255,.25) 50%,
-            transparent 51%
-        ),
-
-        linear-gradient(
-            0deg,
-            transparent 49%,
-            rgba(86,188,255,.25) 50%,
-            transparent 51%
-        );
-
-    background-size:100px 100px;
+.about-visual:before,
+.about-visual:after{
+content:"";
+position:absolute;
+border:1px solid rgba(255,255,255,.2);
+border-radius:50%
 }
 
-.about-symbol{
-    position:absolute;
-
-    left:50%;
-    top:42%;
-
-    transform:
-        translate(-50%,-50%);
-
-    width:145px;
-    height:145px;
-
-    display:grid;
-    place-items:center;
-
-    border-radius:38px;
-
-    color:#fff;
-
-    font-size:75px;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--blue),
-            var(--blue2)
-        );
-
-    box-shadow:
-        0 25px 60px
-        rgba(22,140,255,.4);
+.about-visual:before{
+width:420px;
+height:420px
 }
 
-.about-badge{
-    position:absolute;
-
-    left:25px;
-    right:25px;
-    bottom:25px;
-
-    padding:22px;
-
-    border-radius:18px;
-
-    background:
-        rgba(3,10,18,.82);
-
-    border:1px solid
-        rgba(255,255,255,.1);
-
-    backdrop-filter:blur(10px);
-
-    color:#fff;
+.about-visual:after{
+width:260px;
+height:260px
 }
 
-.about-badge strong{
-    display:block;
-
-    font-size:24px;
-
-    margin-bottom:3px;
+.about-box{
+text-align:center;
+position:relative;
+z-index:2;
+color:#fff
 }
 
-.about-badge span{
-    color:#aabccc;
-
-    font-size:13px;
+.about-big{
+font-size:92px;
+font-weight:1000;
+letter-spacing:-.08em;
+line-height:.8
 }
 
-.about-text h2{
-    margin-bottom:17px;
-
-    font-size:clamp(32px,5vw,47px);
-
-    line-height:1.05;
-
-    letter-spacing:-2px;
+.about-small{
+font-size:25px;
+letter-spacing:.2em;
+font-weight:900;
+margin-top:10px
 }
 
-.about-text>p{
-    color:var(--muted);
+.about-line{
+height:2px;
+width:80px;
+background:#fff;
+margin:22px auto
 }
 
-.check-list{
-    display:grid;
-
-    gap:17px;
-
-    margin-top:30px;
+.about-box p{
+font-size:11px;
+letter-spacing:.2em;
+color:#d8ecff;
+font-weight:900
 }
 
-.check{
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:13px;
+.about-content h2{
+font-size:clamp(34px,4vw,52px);
+line-height:1.05;
+margin-bottom:24px
 }
 
-.check-icon{
-    width:29px;
-    height:29px;
-
-    flex-shrink:0;
-
-    display:grid;
-    place-items:center;
-
-    border-radius:50%;
-
-    color:var(--blue);
-
-    background:#ddf2ff;
-
-    font-weight:900;
+.about-content>p{
+color:var(--muted);
+line-height:1.8;
+margin-bottom:15px
 }
 
-.check strong{
-    display:block;
-
-    margin-bottom:2px;
+.about-points{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin:25px 0 30px
 }
 
-.check span{
-    color:var(--muted);
-
-    font-size:13px;
+.about-points div{
+font-size:14px;
+font-weight:800
 }
 
-
-/* =====================================================
-   STATYSTYKI
-   ===================================================== */
+/* STATYSTYKI */
 
 .stats{
-    background:var(--navy);
-
-    color:#fff;
+background:var(--navy);
+color:#fff;
+padding:55px 0
 }
 
 .stats-grid{
-    display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    gap:20px;
-
-    text-align:center;
+display:grid;
+grid-template-columns:repeat(4,1fr)
 }
 
 .stat{
-    padding:25px 15px;
+text-align:center;
+border-right:1px solid rgba(255,255,255,.1)
 }
 
+.stat:last-child{border:0}
+
 .stat strong{
-    display:block;
-
-    color:#51b3ff;
-
-    font-size:43px;
-
-    line-height:1;
-
-    margin-bottom:10px;
+display:block;
+color:#fff;
+font-size:36px
 }
 
 .stat span{
-    color:#9eafc1;
-
-    font-size:13px;
+color:#91a4b7;
+font-size:12px
 }
 
+/* ZAKRES */
 
-/* =====================================================
-   ZAKRES PRAC
-   ===================================================== */
-
-.scope{
-    background:#fff;
-}
+.scope{background:#fff}
 
 .scope-grid{
-    display:grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
-    gap:14px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:14px
 }
 
 .scope-item{
-    display:flex;
-
-    align-items:center;
-
-    gap:15px;
-
-    padding:20px;
-
-    border-radius:16px;
-
-    border:1px solid var(--border);
-
-    background:#fff;
-
-    transition:.2s;
+display:flex;
+gap:15px;
+align-items:center;
+padding:20px;
+border:1px solid var(--border);
+border-radius:16px;
+transition:.2s
 }
 
 .scope-item:hover{
-    transform:translateX(4px);
-
-    border-color:#c9e4f8;
-
-    box-shadow:
-        0 10px 30px
-        rgba(7,17,31,.06);
+transform:translateY(-3px);
+box-shadow:0 10px 30px rgba(7,17,31,.06)
 }
 
 .scope-check{
-    width:37px;
-    height:37px;
-
-    flex-shrink:0;
-
-    display:grid;
-    place-items:center;
-
-    border-radius:11px;
-
-    background:#eaf5ff;
-
-    color:var(--blue);
-
-    font-weight:900;
+width:37px;
+height:37px;
+flex:none;
+display:grid;
+place-items:center;
+border-radius:11px;
+background:#eaf5ff;
+color:var(--blue);
+font-weight:900
 }
 
 .scope-item strong{
-    display:block;
-
-    font-size:15px;
+display:block;
+font-size:15px
 }
 
 .scope-item span{
-    color:var(--muted);
-
-    font-size:12px;
+color:var(--muted);
+font-size:12px
 }
+
+/* PROCES */
+
+.process{
+background:var(--navy);
+color:#fff
+}
+
+.process .section-head h2{color:#fff}
+
+.process .section-head>p{color:#9fb1c2}
+
+.process-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px
+}
+
+.process-card{
+padding:28px;
+border:1px solid rgba(255,255,255,.1);
+border-radius:var(--radius);
+background:rgba(255,255,255,.04)
+}
+
+.process-number{
+width:46px;
+height:46px;
+border-radius:14px;
+display:grid;
+place-items:center;
+background:var(--blue);
+font-weight:900;
+margin-bottom:20px
+}
+
+.process-card h3{
+font-size:18px;
+margin-bottom:10px
+}
+
+.process-card p{
+color:#9fb1c2;
+font-size:14px;
+line-height:1.7
+}
+
+/* REALIZACJE */
+
+.projects{background:#fff}
+
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px
+}
+
+.project-card{
+height:310px;
+border-radius:var(--radius);
+overflow:hidden;
+position:relative;
+background:linear-gradient(145deg,#06101d,#168cff)
+}
+
+.project-card:nth-child(2){
+background:linear-gradient(145deg,#0b1b2d,#48b1ff)
+}
+
+.project-card:nth-child(3){
+background:linear-gradient(145deg,#10263e,#0870d4)
+}
+
+.project-card:nth-child(4){
+background:linear-gradient(145deg,#172334,#168cff)
+}
+
+.project-card:nth-child(5){
+background:linear-gradient(145deg,#0a192b,#20c77a)
+}
+
+.project-card:nth-child(6){
+background:linear-gradient(145deg,#02070d,#55b8ff)
+}
+
+.project-pattern{
+position:absolute;
+inset:0;
+opacity:.15;
+background-image:
+linear-gradient(45deg,transparent 45%,#fff 46%,#fff 54%,transparent 55%),
+linear-gradient(-45deg,transparent 45%,#fff 46%,#fff 54%,transparent 55%);
+background-size:55px 55px
+}
+
+.project-content{
+position:absolute;
+bottom:0;
+left:0;
+right:0;
+padding:25px;
+background:linear-gradient(transparent,rgba(0,0,0,.9))
+}
+
+.project-content span{
+font-size:11px;
+text-transform:uppercase;
+letter-spacing:.13em;
+color:#91d2ff;
+font-weight:900
+}
+
+.project-content h3{
+color:#fff;
+font-size:20px;
+margin-top:7px
+}
+
+/* OPINIE */
+
+.reviews{background:var(--light)}
+
+.reviews-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px
+}
+
+.review{
+background:#fff;
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:28px
+}
+
+.stars{
+color:var(--blue);
+letter-spacing:3px;
+margin-bottom:15px
+}
+
+.review>p{
+color:#536477;
+line-height:1.8;
+margin-bottom:22px
+}
+
+.review-author{
+display:flex;
+align-items:center;
+gap:12px
+}
+
+.avatar{
+width:42px;
+height:42px;
+border-radius:50%;
+background:var(--navy);
+color:#fff;
+display:grid;
+place-items:center;
+font-weight:900
+}
+
+.review-author strong{
+display:block;
+font-size:14px
+}
+
+.review-author span{
+font-size:12px;
+color:var(--muted)
+}
+
+/* FAQ */
+
+.faq{background:#fff}
+
+.faq-list{
+max-width:900px;
+margin:auto
+}
+
+.faq-item{
+border-bottom:1px solid var(--border)
+}
+
+.faq-question{
+width:100%;
+border:0;
+background:none;
+padding:22px 4px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+text-align:left;
+font-weight:900;
+color:var(--text);
+cursor:pointer
+}
+
+.faq-icon{
+width:31px;
+height:31px;
+border-radius:50%;
+background:var(--light);
+display:grid;
+place-items:center;
+color:var(--blue);
+font-size:20px;
+transition:.2s
+}
+
+.faq-answer{
+max-height:0;
+overflow:hidden;
+transition:max-height .3s ease
+}
+
+.faq-answer p{
+padding:0 45px 22px 4px;
+color:var(--muted);
+line-height:1.8
+}
+
+.faq-item.active .faq-icon{
+transform:rotate(45deg);
+background:var(--blue);
+color:#fff
+}
+
+/* CTA */
+
+.cta{
+padding:35px 0;
+background:#fff
+}
+
+.cta-box{
+padding:55px;
+border-radius:30px;
+background:
+radial-gradient(circle at 90% 20%,rgba(72,177,255,.3),transparent 35%),
+linear-gradient(135deg,#06101d,#10263e);
+color:#fff
+}
+
+.cta-box h2{
+font-size:clamp(32px,4vw,52px);
+line-height:1.05;
+margin-bottom:15px
+}
+
+.cta-box p{
+max-width:650px;
+color:#b9c7d5;
+line-height:1.8;
+margin-bottom:25px
+}
+
+.cta-actions{
+display:flex;
+gap:12px;
+flex-wrap:wrap
+}
+
+/* KONTAKT */
+
+.contact{background:var(--light)}
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px
+}
+
+.contact-card,
+.contact-highlight{
+border-radius:var(--radius);
+padding:34px
+}
+
+.contact-card{
+background:#fff;
+border:1px solid var(--border)
+}
+
+.contact-card h3{
+font-size:25px;
+margin-bottom:10px
+}
+
+.contact-card>p{
+color:var(--muted);
+margin-bottom:24px
+}
+
+.contact-list{
+display:grid;
+gap:12px
+}
+
+.contact-row{
+display:flex;
+gap:13px;
+align-items:center;
+padding:14px;
+border-radius:14px;
+background:var(--light)
+}
+
+.contact-icon{
+width:42px;
+height:42px;
+border-radius:12px;
+background:#eaf5ff;
+color:var(--blue);
+display:grid;
+place-items:center;
+flex:none
+}
+
+.contact-row strong{
+display:block;
+font-size:13px
+}
+
+.contact-row a,
+.contact-row span{
+font-size:14px;
+color:var(--muted)
+}
+
+.contact-highlight{
+background:var(--navy);
+color:#fff;
+display:flex;
+flex-direction:column;
+justify-content:center
+}
+
+.contact-highlight h3{
+font-size:30px;
+margin-bottom:12px
+}
+
+.contact-highlight p{
+color:#aebed0;
+line-height:1.8;
+margin-bottom:22px
+}
+
+.contact-phone{
+font-size:28px;
+font-weight:900;
+color:#fff;
+margin-bottom:22px
+}
+
+.contact-phone:hover{color:#55b8ff}
+
+/* STOPKA */
+
+footer{
+background:#02070d;
+color:#fff;
+padding:30px 0
+}
+
+.footer-inner{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px
+}
+
+.footer-logo{
+font-weight:900;
+font-size:20px
+}
+
+.footer-logo span{color:var(--blue)}
+
+.footer-copy,
+.footer-link{
+font-size:12px;
+color:#728396
+}
+
+.footer-link:hover{color:#fff}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+.hero-grid,
+.about-grid{
+grid-template-columns:1fr
+}
+
+.hero-visual{
+min-height:400px
+}
+
+.services-grid,
+.projects-grid{
+grid-template-columns:repeat(2,1fr)
+}
+
+.process-grid{
+grid-template-columns:repeat(2,1fr)
+}
+
+.reviews-grid{
+grid-template-columns:1fr
+}
+
+}
+
+@media(max-width:760px){
+
+section{padding:70px 0}
+
+.container{
+width:min(100% - 28px,1180px)
+}
+
+.desktop-nav{display:none}
+
+.menu-toggle{display:flex}
+
+.hero{
+padding:65px 0
+}
+
+.hero h1{font-size:43px}
+
+.hero p{font-size:16px}
+
+.hero-visual{
+min-height:390px
+}
+
+.float.one{left:-5px}
+.float.two{right:-5px}
+
+.trust-grid{
+grid-template-columns:1fr 1fr
+}
+
+.trust-item{
+border-bottom:1px solid var(--border)
+}
+
+.section-head{
+display:block
+}
+
+.section-head>p{
+margin-top:18px
+}
+
+.services-grid,
+.projects-grid,
+.process-grid,
+.contact-grid{
+grid-template-columns:1fr
+}
+
+.about-points,
+.scope-grid{
+grid-template-columns:1fr
+}
+
+.stats-grid{
+grid-template-columns:1fr 1fr;
+gap:25px
+}
+
+.stat{border:0}
+
+.cta-box{
+padding:35px 24px
+}
+
+.footer-inner{
+flex-direction:column;
+align-items:flex-start
+}
+
+}
+
+@media(max-width:480px){
+
+.topbar-inner{
+padding:8px 0
+}
+
+.topbar-inner div{display:none}
+
+.hero h1{font-size:36px}
+
+.hero-card{padding:26px}
+
+.bolt{font-size:65px}
+
+.hero-card h3{font-size:31px}
+
+.hero-visual{min-height:350px}
+
+.trust-grid,
+.stats-grid{
+grid-template-columns:1fr
+}
+
+.trust-item{border-right:0}
+
+.contact-phone{font-size:23px}
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- GÓRNA BELKA -->
+
+<div class="topbar">
+<div class="container topbar-inner">
+<div>Profesjonalne usługi elektryczne</div>
+<a href="tel:787672404">☎ 787 672 404</a>
+</div>
+</div>
+
+<!-- MENU -->
+
+<header>
+
+<div class="container header-inner">
+
+<a class="logo" href="#start">
+<strong>LUT</strong> <span>INSTAL</span>
+</a>
+
+<nav class="desktop-nav">
+<a href="#start">Start</a>
+<a href="#uslugi">Usługi</a>
+<a href="#onas">O nas</a>
+<a href="#realizacje">Realizacje</a>
+<a href="#opinie">Opinie</a>
+<a href="#faq">FAQ</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
+
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">
+<span></span>
+<span></span>
+<span></span>
+</button>
+
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+
+<a href="#start">Start</a>
+<a href="#uslugi">Usługi</a>
+<a href="#onas">O nas</a>
+<a href="#realizacje">Realizacje</a>
+<a href="#opinie">Opinie</a>
+<a href="#faq">FAQ</a>
+<a href="#kontakt">Kontakt</a>
+<a class="mobile-phone" href="tel:787672404">
+☎ 787 672 404
+</a>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="start">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="eyebrow">
+<span></span>
+USŁUGI ELEKTRYCZNE
+</div>
+
+<h1>
+Prąd pod kontrolą.<br>
+<em>Instalacje bez kompromisów.</em>
+</h1>
+
+<p>
+LUT INSTAL to profesjonalne usługi elektryczne —
+od nowych instalacji, przez modernizacje i oświetlenie,
+aż po rozdzielnice, diagnostykę i usuwanie awarii.
+</p>
+
+<div class="hero-buttons">
+
+<a class="btn btn-primary" href="tel:787672404">
+☎ Zadzwoń: 787 672 404
+</a>
+
+<a class="btn btn-outline" href="#uslugi">
+Zobacz usługi →
+</a>
+
+</div>
+
+<div class="hero-note">
+<span>✓</span>
+Fachowe wykonanie • Bezpieczeństwo • Terminowość
+</div>
+
+</div>
+
+<div class="hero-visual">
+
+<div class="hero-card">
+
+<div class="card-top">
+<span class="status"></span>
+LUT INSTAL
+</div>
+
+<div class="bolt">⚡</div>
+
+<h3>
+Energia,<br>
+która działa.
+</h3>
+
+<p>
+Nowoczesne rozwiązania elektryczne
+dopasowane do Twoich potrzeb.
+</p>
+
+<div class="card-bottom">
+<span>INSTALACJE</span>
+<strong>230V / 400V</strong>
+</div>
+
+</div>
+
+<div class="float one">
+<strong>✓</strong>
+Bezpieczna<br>
+instalacja
+</div>
+
+<div class="float two">
+<strong>24/7</strong>
+Pomoc<br>
+awaryjna
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ZALETY -->
+
+<div class="trust">
+
+<div class="container trust-grid">
+
+<div class="trust-item">
+<strong>01</strong>
+<span>Profesjonalne<br>wykonanie</span>
+</div>
+
+<div class="trust-item">
+<strong>02</strong>
+<span>Bezpieczeństwo<br>instalacji</span>
+</div>
+
+<div class="trust-item">
+<strong>03</strong>
+<span>Terminowa<br>realizacja</span>
+</div>
+
+<div class="trust-item">
+<strong>04</strong>
+<span>Indywidualne<br>podejście</span>
+</div>
+
+</div>
+
+</div>
+
+<!-- USŁUGI -->
+
+<section class="services" id="uslugi">
+
+<div class="container">
+
+<div class="section-head">
+
+<div>
+
+<div class="eyebrow">
+<span></span>
+CO ROBIMY
+</div>
+
+<h2>
+Kompleksowe usługi<br>
+<em>elektryczne.</em>
+</h2>
+
+</div>
+
+<p>
+Wykonujemy instalacje elektryczne dla domów,
+mieszkań, lokali oraz obiektów użytkowych.
+</p>
+
+</div>
+
+<div class="services-grid">
+
+<article class="service-card">
+<div class="service-icon">⚡</div>
+<h3>Instalacje elektryczne</h3>
+<p>
+Kompleksowe wykonanie nowych instalacji
+elektrycznych w budynkach i lokalach.
+</p>
+<span>01</span>
+</article>
+
+<article class="service-card">
+<div class="service-icon">🏠</div>
+<h3>Instalacje w domach</h3>
+<p>
+Instalacje dla nowych budynków,
+remontów oraz modernizacji istniejących instalacji.
+</p>
+<span>02</span>
+</article>
+
+<article class="service-card">
+<div class="service-icon">💡</div>
+<h3>Oświetlenie</h3>
+<p>
+Montaż lamp, opraw, oświetlenia LED
+oraz nowoczesnych systemów sterowania.
+</p>
+<span>03</span>
+</article>
+
+<article class="service-card">
+<div class="service-icon">🔌</div>
+<h3>Gniazda i zasilanie</h3>
+<p>
+Montaż i rozbudowa gniazd, obwodów
+oraz punktów zasilających.
+</p>
+<span>04</span>
+</article>
+
+<article class="service-card">
+<div class="service-icon">🧰</div>
+<h3>Rozdzielnice</h3>
+<p>
+Montaż, przebudowa i uporządkowanie
+rozdzielnic elektrycznych.
+</p>
+<span>05</span>
+</article>
+
+<article class="service-card">
+<div class="service-icon">🔧</div>
+<h3>Modernizacje</h3>
+<p>
+Wymiana starej instalacji oraz dostosowanie
+jej do obecnych potrzeb.
+</p>
+<span>06</span>
+</article>
+
+<article class="service-card">
+<div class="service-icon">📐</div>
+<h3>Pomiary i sprawdzenia</h3>
+<p>
+Sprawdzenie instalacji i podstawowa diagnostyka
+problemów elektrycznych.
+</p>
+<span>07</span>
+</article>
+
+<article class="service-card">
+<div class="service-icon">🚨</div>
+<h3>Awarie elektryczne</h3>
+<p>
+Pomoc przy nagłych problemach,
+braku zasilania i uszkodzeniach instalacji.
+</p>
+<span>08</span>
+</article>
+
+<article class="service-card">
+<div class="service-icon">🏢</div>
+<h3>Lokale i firmy</h3>
+<p>
+Instalacje oraz modernizacje elektryczne
+dla lokali użytkowych i małych firm.
+</p>
+<span>09</span>
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- O NAS -->
+
+<section class="about" id="onas">
+
+<div class="container about-grid">
+
+<div class="about-visual">
+
+<div class="about-box">
+
+<div class="about-big">LUT</div>
+
+<div class="about-small">INSTAL</div>
+
+<div class="about-line"></div>
+
+<p>USŁUGI ELEKTRYCZNE</p>
+
+</div>
+
+</div>
+
+<div class="about-content">
+
+<div class="eyebrow">
+<span></span>
+O LUT INSTAL
+</div>
+
+<h2>
+Elektryka wykonana<br>
+<em>tak, jak powinna.</em>
+</h2>
+
+<p>
+Stawiamy na solidność, bezpieczeństwo i estetykę.
+Każdą realizację traktujemy indywidualnie —
+niezależnie od tego, czy chodzi o pojedynczy punkt,
+czy kompletną instalację.
+</p>
+
+<p>
+Zależy nam na rozwiązaniach, które będą działały
+bezproblemowo przez lata, a wykonana instalacja
+będzie przejrzysta i łatwa w późniejszej obsłudze.
+</p>
+
+<div class="about-points">
+
+<div>✓ Dokładne wykonanie</div>
+<div>✓ Dobór odpowiednich rozwiązań</div>
+<div>✓ Estetyka instalacji</div>
+<div>✓ Bezpieczeństwo przede wszystkim</div>
+
+</div>
+
+<a href="#kontakt" class="btn btn-primary">
+Porozmawiajmy o realizacji →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STATYSTYKI -->
+
+<section class="stats">
+
+<div class="container stats-grid">
+
+<div class="stat">
+<strong>100%</strong>
+<span>Zaangażowania<br>w realizację</span>
+</div>
+
+<div class="stat">
+<strong>230V</strong>
+<span>Standardowe<br>instalacje</span>
+</div>
+
+<div class="stat">
+<strong>400V</strong>
+<span>Instalacje<br>trójfazowe</span>
+</div>
+
+<div class="stat">
+<strong>24/7</strong>
+<span>Kontakt<br>awaryjny</span>
+</div>
+
+</div>
+
+</section>
+
+<!-- ZAKRES -->
+
+<section class="scope" id="zakres">
+
+<div class="container">
+
+<div class="section-head">
+
+<div>
+
+<div class="eyebrow">
+<span></span>
+ZAKRES PRAC
+</div>
+
+<h2>
+Od małego punktu<br>
+<em>po kompletną instalację.</em>
+</h2>
+
+</div>
+
+<p>
+Możesz zgłosić zarówno pojedynczą usterkę,
+jak i zaplanować z nami większą realizację.
+</p>
+
+</div>
+
+<div class="scope-grid">
+
+<div class="scope-item">
+<div class="scope-check">✓</div>
+<div>
+<strong>Nowe instalacje</strong>
+<span>Domy, mieszkania, lokale</span>
+</div>
+</div>
+
+<div class="scope-item">
+<div class="scope-check">✓</div>
+<div>
+<strong>Remonty instalacji</strong>
+<span>Modernizacja starej elektryki</span>
+</div>
+</div>
+
+<div class="scope-item">
+<div class="scope-check">✓</div>
+<div>
+<strong>Oświetlenie</strong>
+<span>LED, lampy, oprawy</span>
+</div>
+</div>
+
+<div class="scope-item">
+<div class="scope-check">✓</div>
+<div>
+<strong>Rozdzielnice</strong>
+<span>Zabezpieczenia i obwody</span>
+</div>
+</div>
+
+<div class="scope-item">
+<div class="scope-check">✓</div>
+<div>
+<strong>Gniazda</strong>
+<span>Montaż i dodatkowe punkty</span>
+</div>
+</div>
+
+<div class="scope-item">
+<div class="scope-check">✓</div>
+<div>
+<strong>Awarie</strong>
+<span>Diagnostyka i usuwanie problemów</span>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROCES -->
+
+<section class="process">
+
+<div class="container">
+
+<div class="section-head">
+
+<div>
+
+<div class="eyebrow">
+<span></span>
+JAK PRACUJEMY
+</div>
+
+<h2>
+Prosto od zgłoszenia<br>
+<em>do gotowej instalacji.</em>
+</h2>
+
+</div>
+
+<p>
+Jasne zasady i konkretny kontakt
+na każdym etapie realizacji.
+</p>
+
+</div>
+
+<div class="process-grid">
+
+<div class="process-card">
+<div class="process-number">01</div>
+<h3>Kontakt</h3>
+<p>
+Dzwonisz lub piszesz i opisujesz,
+czego potrzeb
