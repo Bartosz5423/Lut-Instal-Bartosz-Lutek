@@ -2,1685 +2,782 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="LUT INSTAL - profesjonalne usługi elektryczne. Instalacje, modernizacje, oświetlenie, rozdzielnice i serwis.">
-<meta name="theme-color" content="#06101d">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="LUT INSTAL - profesjonalne usługi elektryczne">
 <title>LUT INSTAL | Usługi elektryczne</title>
 
 <style>
-:root{
---navy:#06101d;
---navy2:#0b1b2d;
---blue:#168cff;
---blue2:#55b8ff;
---white:#fff;
---text:#172334;
---muted:#687789;
---light:#f4f7fb;
---border:#dfe7ef;
---green:#20c77a;
---shadow:0 20px 60px rgba(7,17,31,.12);
---radius:22px
-}
-
 *{box-sizing:border-box;margin:0;padding:0}
-
 html{scroll-behavior:smooth}
-
-body{
-font-family:Arial,Helvetica,sans-serif;
-color:var(--text);
-background:#fff;
-line-height:1.5
-}
-
+body{font-family:Arial,Helvetica,sans-serif;color:#15263b;line-height:1.6}
 a{text-decoration:none;color:inherit}
-button{font:inherit}
+img{width:100%;height:100%;object-fit:cover}
+.container{width:92%;max-width:1150px;margin:auto}
+section{padding:75px 0}
+:root{--dark:#07182b;--blue:#087cf0;--yellow:#ffbd22;--light:#f3f7fb;--gray:#68798b;--border:#dce5ed}
 
-.container{
-width:min(1180px,calc(100% - 36px));
-margin:auto
-}
-
-section{padding:90px 0}
-
-/* TOP */
-
-.topbar{
-background:#02070d;
-color:#aebed0;
-font-size:13px
-}
-
-.topbar-inner{
-min-height:38px;
-display:flex;
-justify-content:space-between;
-align-items:center
-}
-
-.topbar a{
-color:#fff;
-font-weight:800
-}
-
-/* HEADER */
-
-header{
-position:sticky;
-top:0;
-z-index:50;
-background:rgba(6,16,29,.96);
-backdrop-filter:blur(12px);
-color:#fff;
-border-bottom:1px solid rgba(255,255,255,.08)
-}
-
-.header-inner{
-height:76px;
-display:flex;
-align-items:center;
-justify-content:space-between
-}
-
-.logo{
-font-size:24px;
-font-weight:900;
-letter-spacing:.04em
-}
-
-.logo strong{color:#fff}
-.logo span{color:var(--blue)}
-
-.desktop-nav{
-display:flex;
-gap:26px;
-align-items:center
-}
-
-.desktop-nav a{
-font-size:14px;
-color:#c8d4df;
-font-weight:700
-}
-
-.desktop-nav a:hover{color:#fff}
-
-.menu-toggle{
-display:none;
-border:0;
-background:none;
-width:42px;
-height:42px;
-cursor:pointer;
-flex-direction:column;
-justify-content:center;
-gap:5px
-}
-
-.menu-toggle span{
-display:block;
-width:24px;
-height:2px;
-background:#fff;
-margin:auto
-}
-
-.mobile-menu{
-display:none;
-padding:10px 18px 22px;
-border-top:1px solid rgba(255,255,255,.08)
-}
-
-.mobile-menu a{
-display:block;
-padding:14px 0;
-color:#fff;
-font-weight:700
-}
-
-.mobile-menu.active{display:block}
-.mobile-phone{color:#70c3ff!important}
+/* MENU */
+.top{background:#02070c;color:#fff;padding:9px 0;font-size:13px}
+.top .container{display:flex;justify-content:space-between}
+header{position:sticky;top:0;z-index:20;background:#07182b;color:#fff}
+.nav{height:75px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:25px;font-weight:900}
+.logo span{color:var(--yellow)}
+nav{display:flex;gap:20px;align-items:center}
+nav a{font-size:14px;font-weight:bold;color:#dce6ee}
+.call{background:var(--blue);padding:11px 17px;border-radius:9px;color:#fff!important}
+.menu{display:none;background:none;border:0;color:#fff;font-size:28px}
 
 /* HERO */
-
 .hero{
-background:
-radial-gradient(circle at 85% 20%,rgba(22,140,255,.22),transparent 32%),
-linear-gradient(135deg,#06101d,#0a192b);
+min-height:650px;
+display:flex;
+align-items:center;
 color:#fff;
-padding:100px 0 90px;
-overflow:hidden
+background:linear-gradient(90deg,#03101eee,#03101e88),
+url("https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1800&q=85") center/cover
 }
-
-.hero-grid{
-display:grid;
-grid-template-columns:1.05fr .95fr;
-gap:60px;
-align-items:center
-}
-
-.eyebrow{
-display:flex;
-align-items:center;
-gap:10px;
-color:var(--blue);
-font-size:12px;
-font-weight:900;
-letter-spacing:.14em;
-margin-bottom:18px
-}
-
-.eyebrow span{
-width:28px;
-height:2px;
-background:var(--blue);
-display:block
-}
-
-.hero h1{
-font-size:clamp(42px,6vw,72px);
-line-height:1.02;
-letter-spacing:-.04em;
-margin-bottom:24px
-}
-
-.hero h1 em,
-.section-head h2 em,
-.about-content h2 em{
-font-style:normal;
-color:var(--blue2)
-}
-
-.hero p{
-max-width:680px;
-color:#b9c7d5;
-font-size:18px;
-line-height:1.75;
-margin-bottom:30px
-}
-
-.hero-buttons{
-display:flex;
-gap:12px;
-flex-wrap:wrap
-}
-
-.btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-min-height:50px;
-padding:0 22px;
-border-radius:13px;
-font-weight:900;
-border:1px solid transparent;
-transition:.2s;
-cursor:pointer
-}
-
-.btn-primary{
-background:var(--blue);
-color:#fff
-}
-
-.btn-primary:hover{
-transform:translateY(-2px);
-background:#0875d6
-}
-
-.btn-outline{
-border-color:rgba(255,255,255,.28);
-color:#fff
-}
-
-.btn-outline:hover{
-background:#fff;
-color:var(--navy)
-}
-
-.btn-outline-light{
-border-color:rgba(255,255,255,.25);
-color:#fff
-}
-
-.hero-note{
-margin-top:22px;
-color:#9fb1c2;
-font-size:13px
-}
-
-.hero-note span{
-color:var(--green);
-font-weight:900;
-margin-right:7px
-}
-
-.hero-visual{
-min-height:480px;
-position:relative;
-display:grid;
-place-items:center
-}
-
-.hero-card{
-width:min(390px,90%);
-padding:34px;
-border:1px solid rgba(255,255,255,.14);
-border-radius:30px;
-background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.035));
-box-shadow:0 30px 80px rgba(0,0,0,.35);
-position:relative;
-z-index:2
-}
-
-.card-top{
-display:flex;
-align-items:center;
-gap:10px;
-color:#b9c7d5;
-font-size:12px;
-font-weight:900;
-letter-spacing:.12em
-}
-
-.status{
-width:9px;
-height:9px;
-border-radius:50%;
-background:var(--green);
-box-shadow:0 0 16px var(--green)
-}
-
-.bolt{
-font-size:80px;
-line-height:1;
-margin:35px 0 15px
-}
-
-.hero-card h3{
-font-size:38px;
-line-height:1.05;
-margin-bottom:14px
-}
-
-.hero-card p{
-font-size:14px;
-line-height:1.7;
-margin:0;
-color:#aebed0
-}
-
-.card-bottom{
-display:flex;
-justify-content:space-between;
-border-top:1px solid rgba(255,255,255,.1);
-margin-top:28px;
-padding-top:18px;
-font-size:11px;
-color:#8fa3b6
-}
-
-.card-bottom strong{color:#fff}
-
-.float{
-position:absolute;
-z-index:3;
-background:#fff;
-color:var(--text);
-padding:15px 18px;
-border-radius:16px;
-box-shadow:0 18px 45px rgba(0,0,0,.25);
-font-size:12px;
-font-weight:800
-}
-
-.float strong{
-display:block;
-color:var(--blue);
-font-size:20px
-}
-
-.float.one{
-top:70px;
-left:0
-}
-
-.float.two{
-right:0;
-bottom:70px
-}
+.hero-content{max-width:760px}
+.badge{display:inline-block;background:#fff;color:#0870bd;padding:10px 17px;border-radius:40px;font-weight:900;font-size:12px;margin-bottom:22px}
+h1{font-size:clamp(43px,6vw,72px);line-height:1;margin-bottom:24px}
+h1 span,h2 span{color:var(--blue)}
+.hero p{font-size:19px;color:#d6e0e8;max-width:680px;margin-bottom:28px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;justify-content:center;align-items:center;padding:15px 23px;border-radius:10px;font-weight:900}
+.yellow{background:var(--yellow);color:#111}
+.blue{background:var(--blue);color:#fff}
+.outline{border:1px solid #fff8;color:#fff}
+.hero-info{display:flex;gap:25px;margin-top:28px;color:#d0dce5;font-size:13px}
 
 /* TRUST */
+.trust{border-bottom:1px solid var(--border)}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust-item{padding:25px 15px;border-right:1px solid var(--border)}
+.trust-item:last-child{border:0}
+.trust-item b{display:block}
+.trust-item small{color:var(--gray)}
 
-.trust{
-background:#fff;
-border-bottom:1px solid var(--border);
-border-top:1px solid var(--border)
-}
+/* HEADINGS */
+.head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px}
+.kicker{font-size:12px;font-weight:900;letter-spacing:2px;color:var(--blue);margin-bottom:9px}
+h2{font-size:clamp(34px,4vw,52px);line-height:1.05}
+.head p{max-width:430px;color:var(--gray)}
 
-.trust-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr)
-}
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{border:1px solid var(--border);border-radius:20px;overflow:hidden;background:#fff;transition:.25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 50px #07182b18}
+.card img{height:190px}
+.card-body{padding:22px}
+.card h3{margin-bottom:7px}
+.card p{color:var(--gray);font-size:14px}
 
-.trust-item{
-padding:25px;
-display:flex;
-gap:14px;
-align-items:center;
-border-right:1px solid var(--border)
-}
-
-.trust-item:last-child{border-right:0}
-
-.trust-item strong{
-font-size:20px;
-color:var(--blue)
-}
-
-.trust-item span{
-font-size:12px;
-color:var(--muted);
-font-weight:700
-}
-
-/* SEKCJE */
-
-.section-head{
-display:flex;
-justify-content:space-between;
-gap:40px;
-align-items:end;
-margin-bottom:45px
-}
-
-.section-head h2{
-font-size:clamp(32px,4vw,52px);
-line-height:1.05;
-letter-spacing:-.035em
-}
-
-.section-head>p{
-max-width:430px;
-color:var(--muted);
-line-height:1.8
-}
-
-/* USŁUGI */
-
-.services{background:#fff}
-
-.services-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px
-}
-
-.service-card{
-padding:28px;
-border:1px solid var(--border);
-border-radius:var(--radius);
-position:relative;
-min-height:220px;
-transition:.25s;
-background:#fff
-}
-
-.service-card:hover{
-transform:translateY(-5px);
-box-shadow:var(--shadow);
-border-color:#bcdcff
-}
-
-.service-icon{
-width:52px;
-height:52px;
-border-radius:15px;
-display:grid;
-place-items:center;
-background:#eaf5ff;
-color:var(--blue);
-font-size:24px;
-margin-bottom:20px
-}
-
-.service-card h3{
-font-size:19px;
-margin-bottom:10px
-}
-
-.service-card p{
-font-size:14px;
-color:var(--muted);
-line-height:1.7
-}
-
-.service-card>span{
-position:absolute;
-right:22px;
-bottom:18px;
-color:#dce5ee;
-font-size:28px;
-font-weight:900
-}
-
-/* O NAS */
-
+/* ABOUT */
 .about{background:var(--light)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-photo{height:500px;border-radius:25px;overflow:hidden}
+.about p{color:var(--gray);margin:15px 0}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:23px 0}
+.checks div{font-size:14px;font-weight:bold}
+.checks div:before{content:"✓";color:var(--blue);margin-right:8px}
 
-.about-grid{
-display:grid;
-grid-template-columns:.9fr 1.1fr;
-gap:70px;
-align-items:center
-}
-
-.about-visual{
-min-height:440px;
-border-radius:30px;
-background:linear-gradient(145deg,#06101d,#168cff);
-display:grid;
-place-items:center;
-box-shadow:var(--shadow);
-position:relative;
-overflow:hidden
-}
-
-.about-visual:before,
-.about-visual:after{
-content:"";
-position:absolute;
-border:1px solid rgba(255,255,255,.2);
-border-radius:50%
-}
-
-.about-visual:before{
-width:420px;
-height:420px
-}
-
-.about-visual:after{
-width:260px;
-height:260px
-}
-
-.about-box{
-text-align:center;
-position:relative;
-z-index:2;
-color:#fff
-}
-
-.about-big{
-font-size:92px;
-font-weight:1000;
-letter-spacing:-.08em;
-line-height:.8
-}
-
-.about-small{
-font-size:25px;
-letter-spacing:.2em;
-font-weight:900;
-margin-top:10px
-}
-
-.about-line{
-height:2px;
-width:80px;
-background:#fff;
-margin:22px auto
-}
-
-.about-box p{
-font-size:11px;
-letter-spacing:.2em;
-color:#d8ecff;
-font-weight:900
-}
-
-.about-content h2{
-font-size:clamp(34px,4vw,52px);
-line-height:1.05;
-margin-bottom:24px
-}
-
-.about-content>p{
-color:var(--muted);
-line-height:1.8;
-margin-bottom:15px
-}
-
-.about-points{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:12px;
-margin:25px 0 30px
-}
-
-.about-points div{
-font-size:14px;
-font-weight:800
-}
-
-/* STATYSTYKI */
-
-.stats{
-background:var(--navy);
-color:#fff;
-padding:55px 0
-}
-
-.stats-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr)
-}
-
-.stat{
-text-align:center;
-border-right:1px solid rgba(255,255,255,.1)
-}
-
+/* STATS */
+.stats{background:var(--dark);color:#fff}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
+.stat{padding:10px;border-right:1px solid #fff2}
 .stat:last-child{border:0}
-
-.stat strong{
-display:block;
-color:#fff;
-font-size:36px
-}
-
-.stat span{
-color:#91a4b7;
-font-size:12px
-}
-
-/* ZAKRES */
-
-.scope{background:#fff}
-
-.scope-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:14px
-}
-
-.scope-item{
-display:flex;
-gap:15px;
-align-items:center;
-padding:20px;
-border:1px solid var(--border);
-border-radius:16px;
-transition:.2s
-}
-
-.scope-item:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 30px rgba(7,17,31,.06)
-}
-
-.scope-check{
-width:37px;
-height:37px;
-flex:none;
-display:grid;
-place-items:center;
-border-radius:11px;
-background:#eaf5ff;
-color:var(--blue);
-font-weight:900
-}
-
-.scope-item strong{
-display:block;
-font-size:15px
-}
-
-.scope-item span{
-color:var(--muted);
-font-size:12px
-}
-
-/* PROCES */
-
-.process{
-background:var(--navy);
-color:#fff
-}
-
-.process .section-head h2{color:#fff}
-
-.process .section-head>p{color:#9fb1c2}
-
-.process-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:18px
-}
-
-.process-card{
-padding:28px;
-border:1px solid rgba(255,255,255,.1);
-border-radius:var(--radius);
-background:rgba(255,255,255,.04)
-}
-
-.process-number{
-width:46px;
-height:46px;
-border-radius:14px;
-display:grid;
-place-items:center;
-background:var(--blue);
-font-weight:900;
-margin-bottom:20px
-}
-
-.process-card h3{
-font-size:18px;
-margin-bottom:10px
-}
-
-.process-card p{
-color:#9fb1c2;
-font-size:14px;
-line-height:1.7
-}
+.stat b{display:block;font-size:38px}
+.stat small{color:#aebdca}
 
 /* REALIZACJE */
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:220px 220px;gap:14px}
+.photo{position:relative;overflow:hidden;border-radius:17px}
+.photo:first-child{grid-row:span 2}
+.photo img{transition:.4s}
+.photo:hover img{transform:scale(1.07)}
+.photo div{position:absolute;bottom:0;left:0;right:0;padding:30px 15px 14px;color:#fff;font-weight:bold;background:linear-gradient(transparent,#000b)}
 
-.projects{background:#fff}
+/* PROCESS */
+.process{background:var(--light)}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{background:#fff;padding:24px;border:1px solid var(--border);border-radius:18px}
+.num{width:44px;height:44px;display:grid;place-items:center;background:var(--blue);color:#fff;border-radius:11px;font-weight:bold;margin-bottom:15px}
+.step p{font-size:14px;color:var(--gray)}
 
-.projects-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px
-}
-
-.project-card{
-height:310px;
-border-radius:var(--radius);
-overflow:hidden;
-position:relative;
-background:linear-gradient(145deg,#06101d,#168cff)
-}
-
-.project-card:nth-child(2){
-background:linear-gradient(145deg,#0b1b2d,#48b1ff)
-}
-
-.project-card:nth-child(3){
-background:linear-gradient(145deg,#10263e,#0870d4)
-}
-
-.project-card:nth-child(4){
-background:linear-gradient(145deg,#172334,#168cff)
-}
-
-.project-card:nth-child(5){
-background:linear-gradient(145deg,#0a192b,#20c77a)
-}
-
-.project-card:nth-child(6){
-background:linear-gradient(145deg,#02070d,#55b8ff)
-}
-
-.project-pattern{
-position:absolute;
-inset:0;
-opacity:.15;
-background-image:
-linear-gradient(45deg,transparent 45%,#fff 46%,#fff 54%,transparent 55%),
-linear-gradient(-45deg,transparent 45%,#fff 46%,#fff 54%,transparent 55%);
-background-size:55px 55px
-}
-
-.project-content{
-position:absolute;
-bottom:0;
-left:0;
-right:0;
-padding:25px;
-background:linear-gradient(transparent,rgba(0,0,0,.9))
-}
-
-.project-content span{
-font-size:11px;
-text-transform:uppercase;
-letter-spacing:.13em;
-color:#91d2ff;
-font-weight:900
-}
-
-.project-content h3{
-color:#fff;
-font-size:20px;
-margin-top:7px
-}
+/* WHY */
+.why{background:var(--dark);color:#fff}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.why p{color:#aebdca}
+.why-list{display:grid;gap:12px}
+.why-item{padding:20px;border:1px solid #fff2;background:#ffffff08;border-radius:15px}
+.why-item p{font-size:13px}
 
 /* OPINIE */
-
-.reviews{background:var(--light)}
-
-.reviews-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px
-}
-
-.review{
-background:#fff;
-border:1px solid var(--border);
-border-radius:var(--radius);
-padding:28px
-}
-
-.stars{
-color:var(--blue);
-letter-spacing:3px;
-margin-bottom:15px
-}
-
-.review>p{
-color:#536477;
-line-height:1.8;
-margin-bottom:22px
-}
-
-.review-author{
-display:flex;
-align-items:center;
-gap:12px
-}
-
-.avatar{
-width:42px;
-height:42px;
-border-radius:50%;
-background:var(--navy);
-color:#fff;
-display:grid;
-place-items:center;
-font-weight:900
-}
-
-.review-author strong{
-display:block;
-font-size:14px
-}
-
-.review-author span{
-font-size:12px;
-color:var(--muted)
-}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.review{padding:27px;border:1px solid var(--border);border-radius:20px}
+.stars{color:#ffae00;font-size:20px;margin-bottom:10px}
+.review p{color:var(--gray);margin-bottom:18px}
 
 /* FAQ */
-
-.faq{background:#fff}
-
-.faq-list{
-max-width:900px;
-margin:auto
-}
-
-.faq-item{
-border-bottom:1px solid var(--border)
-}
-
-.faq-question{
-width:100%;
-border:0;
-background:none;
-padding:22px 4px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-text-align:left;
-font-weight:900;
-color:var(--text);
-cursor:pointer
-}
-
-.faq-icon{
-width:31px;
-height:31px;
-border-radius:50%;
-background:var(--light);
-display:grid;
-place-items:center;
-color:var(--blue);
-font-size:20px;
-transition:.2s
-}
-
-.faq-answer{
-max-height:0;
-overflow:hidden;
-transition:max-height .3s ease
-}
-
-.faq-answer p{
-padding:0 45px 22px 4px;
-color:var(--muted);
-line-height:1.8
-}
-
-.faq-item.active .faq-icon{
-transform:rotate(45deg);
-background:var(--blue);
-color:#fff
-}
+.faq{background:var(--light)}
+.faq-list{max-width:850px;margin:auto}
+.question{background:#fff;padding:20px;margin-bottom:8px;border-radius:12px;font-weight:bold;cursor:pointer;display:flex;justify-content:space-between}
+.answer{display:none;background:#fff;padding:0 20px 20px;color:var(--gray);margin-top:-8px;margin-bottom:8px;border-radius:0 0 12px 12px}
 
 /* CTA */
-
-.cta{
-padding:35px 0;
-background:#fff
-}
-
 .cta-box{
-padding:55px;
-border-radius:30px;
-background:
-radial-gradient(circle at 90% 20%,rgba(72,177,255,.3),transparent 35%),
-linear-gradient(135deg,#06101d,#10263e);
-color:#fff
+padding:60px;
+border-radius:25px;
+color:#fff;
+background:linear-gradient(90deg,#061525ee,#06152588),
+url("https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1600&q=80") center/cover
 }
+.cta-box p{max-width:650px;color:#cbd6df;margin:15px 0 25px}
 
-.cta-box h2{
-font-size:clamp(32px,4vw,52px);
-line-height:1.05;
-margin-bottom:15px
-}
-
-.cta-box p{
-max-width:650px;
-color:#b9c7d5;
-line-height:1.8;
-margin-bottom:25px
-}
-
-.cta-actions{
-display:flex;
-gap:12px;
-flex-wrap:wrap
-}
-
-/* KONTAKT */
-
+/* CONTACT */
 .contact{background:var(--light)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.contact-card,.contact-dark{padding:35px;border-radius:20px}
+.contact-card{background:#fff}
+.contact-row{padding:15px;background:var(--light);border-radius:12px;margin-top:10px}
+.contact-row b{display:block}
+.contact-row a{color:var(--blue)}
+.contact-dark{background:var(--dark);color:#fff}
+.contact-dark p{color:#b5c3cf;margin-top:10px}
+.phone{display:block;font-size:30px;font-weight:900;margin:20px 0;color:#fff}
 
-.contact-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px
+/* FOOTER */
+footer{background:#02070c;color:#fff;padding:30px 0}
+.footer{display:flex;justify-content:space-between;gap:20px}
+.footer small{color:#778797}
+
+/* MOBILE */
+@media(max-width:850px){
+nav{display:none}
+.menu{display:block}
+.trust-grid,.services-grid{grid-template-columns:1fr 1fr}
+.about-grid,.why-grid,.contact-grid{grid-template-columns:1fr}
+.process-grid{grid-template-columns:1fr 1fr}
+.reviews-grid{grid-template-columns:1fr}
+.gallery{grid-template-columns:1fr 1fr;grid-template-rows:220px 180px 180px}
+.photo:first-child{grid-column:span 2;grid-row:span 1}
 }
-
-.contact-card,
-.contact-highlight{
-border-radius:var(--radius);
-padding:34px
-}
-
-.contact-card{
-background:#fff;
-border:1px solid var(--border)
-}
-
-.contact-card h3{
-font-size:25px;
-margin-bottom:10px
-}
-
-.contact-card>p{
-color:var(--muted);
-margin-bottom:24px
-}
-
-.contact-list{
-display:grid;
-gap:12px
-}
-
-.contact-row{
-display:flex;
-gap:13px;
-align-items:center;
-padding:14px;
-border-radius:14px;
-background:var(--light)
-}
-
-.contact-icon{
-width:42px;
-height:42px;
-border-radius:12px;
-background:#eaf5ff;
-color:var(--blue);
-display:grid;
-place-items:center;
-flex:none
-}
-
-.contact-row strong{
-display:block;
-font-size:13px
-}
-
-.contact-row a,
-.contact-row span{
-font-size:14px;
-color:var(--muted)
-}
-
-.contact-highlight{
-background:var(--navy);
-color:#fff;
-display:flex;
-flex-direction:column;
-justify-content:center
-}
-
-.contact-highlight h3{
-font-size:30px;
-margin-bottom:12px
-}
-
-.contact-highlight p{
-color:#aebed0;
-line-height:1.8;
-margin-bottom:22px
-}
-
-.contact-phone{
-font-size:28px;
-font-weight:900;
-color:#fff;
-margin-bottom:22px
-}
-
-.contact-phone:hover{color:#55b8ff}
-
-/* STOPKA */
-
-footer{
-background:#02070d;
-color:#fff;
-padding:30px 0
-}
-
-.footer-inner{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:20px
-}
-
-.footer-logo{
-font-weight:900;
-font-size:20px
-}
-
-.footer-logo span{color:var(--blue)}
-
-.footer-copy,
-.footer-link{
-font-size:12px;
-color:#728396
-}
-
-.footer-link:hover{color:#fff}
-
-/* RESPONSIVE */
-
-@media(max-width:1000px){
-
-.hero-grid,
-.about-grid{
-grid-template-columns:1fr
-}
-
-.hero-visual{
-min-height:400px
-}
-
-.services-grid,
-.projects-grid{
-grid-template-columns:repeat(2,1fr)
-}
-
-.process-grid{
-grid-template-columns:repeat(2,1fr)
-}
-
-.reviews-grid{
-grid-template-columns:1fr
-}
-
-}
-
-@media(max-width:760px){
-
-section{padding:70px 0}
-
-.container{
-width:min(100% - 28px,1180px)
-}
-
-.desktop-nav{display:none}
-
-.menu-toggle{display:flex}
-
-.hero{
-padding:65px 0
-}
-
-.hero h1{font-size:43px}
-
+@media(max-width:600px){
+section{padding:60px 0}
+.top .container{justify-content:center}
+.hero{min-height:650px}
+h1{font-size:42px}
 .hero p{font-size:16px}
-
-.hero-visual{
-min-height:390px
-}
-
-.float.one{left:-5px}
-.float.two{right:-5px}
-
-.trust-grid{
-grid-template-columns:1fr 1fr
-}
-
-.trust-item{
-border-bottom:1px solid var(--border)
-}
-
-.section-head{
-display:block
-}
-
-.section-head>p{
-margin-top:18px
-}
-
-.services-grid,
-.projects-grid,
-.process-grid,
-.contact-grid{
-grid-template-columns:1fr
-}
-
-.about-points,
-.scope-grid{
-grid-template-columns:1fr
-}
-
-.stats-grid{
-grid-template-columns:1fr 1fr;
-gap:25px
-}
-
+.hero-info{display:grid;grid-template-columns:1fr 1fr}
+.trust-grid,.services-grid,.process-grid{grid-template-columns:1fr}
+.trust-item{border-right:0;border-bottom:1px solid var(--border)}
+.about-photo{height:380px}
+.checks{grid-template-columns:1fr}
+.stats-grid{grid-template-columns:1fr 1fr;gap:20px}
 .stat{border:0}
-
-.cta-box{
-padding:35px 24px
-}
-
-.footer-inner{
-flex-direction:column;
-align-items:flex-start
-}
-
-}
-
-@media(max-width:480px){
-
-.topbar-inner{
-padding:8px 0
-}
-
-.topbar-inner div{display:none}
-
-.hero h1{font-size:36px}
-
-.hero-card{padding:26px}
-
-.bolt{font-size:65px}
-
-.hero-card h3{font-size:31px}
-
-.hero-visual{min-height:350px}
-
-.trust-grid,
-.stats-grid{
-grid-template-columns:1fr
-}
-
-.trust-item{border-right:0}
-
-.contact-phone{font-size:23px}
-
+.gallery{grid-template-columns:1fr;grid-template-rows:repeat(5,220px)}
+.photo:first-child{grid-column:span 1}
+.cta-box{padding:40px 25px}
+.footer{flex-direction:column}
 }
 </style>
 </head>
 
 <body>
 
-<!-- GÓRNA BELKA -->
-
-<div class="topbar">
-<div class="container topbar-inner">
-<div>Profesjonalne usługi elektryczne</div>
+<div class="top">
+<div class="container">
+<span>Profesjonalne usługi elektryczne</span>
 <a href="tel:787672404">☎ 787 672 404</a>
 </div>
 </div>
 
-<!-- MENU -->
-
 <header>
+<div class="container nav">
+<a class="logo" href="#start">LUT <span>INSTAL</span></a>
 
-<div class="container header-inner">
-
-<a class="logo" href="#start">
-<strong>LUT</strong> <span>INSTAL</span>
-</a>
-
-<nav class="desktop-nav">
+<nav>
 <a href="#start">Start</a>
 <a href="#uslugi">Usługi</a>
 <a href="#onas">O nas</a>
 <a href="#realizacje">Realizacje</a>
 <a href="#opinie">Opinie</a>
-<a href="#faq">FAQ</a>
 <a href="#kontakt">Kontakt</a>
+<a class="call" href="tel:787672404">Zadzwoń</a>
 </nav>
 
-<button class="menu-toggle" id="menuToggle" aria-label="Menu">
-<span></span>
-<span></span>
-<span></span>
-</button>
-
+<button class="menu" onclick="menu()">☰</button>
 </div>
 
-<div class="mobile-menu" id="mobileMenu">
-
-<a href="#start">Start</a>
-<a href="#uslugi">Usługi</a>
-<a href="#onas">O nas</a>
-<a href="#realizacje">Realizacje</a>
-<a href="#opinie">Opinie</a>
-<a href="#faq">FAQ</a>
-<a href="#kontakt">Kontakt</a>
-<a class="mobile-phone" href="tel:787672404">
-☎ 787 672 404
-</a>
-
+<div id="mobile" style="display:none;padding:10px 4%;background:#07182b">
+<a href="#start" style="display:block;padding:12px">Start</a>
+<a href="#uslugi" style="display:block;padding:12px">Usługi</a>
+<a href="#onas" style="display:block;padding:12px">O nas</a>
+<a href="#realizacje" style="display:block;padding:12px">Realizacje</a>
+<a href="#opinie" style="display:block;padding:12px">Opinie</a>
+<a href="#kontakt" style="display:block;padding:12px">Kontakt</a>
 </div>
-
 </header>
 
-<!-- HERO -->
-
 <section class="hero" id="start">
+<div class="container">
+<div class="hero-content">
+<div class="badge">USŁUGI ELEKTROENERGETYCZNE</div>
 
-<div class="container hero-grid">
-
-<div>
-
-<div class="eyebrow">
-<span></span>
-USŁUGI ELEKTRYCZNE
-</div>
-
-<h1>
-Prąd pod kontrolą.<br>
-<em>Instalacje bez kompromisów.</em>
-</h1>
+<h1>Instalacje elektryczne<br>wykonane <span>solidnie.</span></h1>
 
 <p>
-LUT INSTAL to profesjonalne usługi elektryczne —
-od nowych instalacji, przez modernizacje i oświetlenie,
-aż po rozdzielnice, diagnostykę i usuwanie awarii.
+Profesjonalne usługi elektryczne dla domów,
+mieszkań, firm i lokali. Instalacje, modernizacje,
+oświetlenie, rozdzielnice oraz serwis.
 </p>
 
-<div class="hero-buttons">
-
-<a class="btn btn-primary" href="tel:787672404">
-☎ Zadzwoń: 787 672 404
-</a>
-
-<a class="btn btn-outline" href="#uslugi">
-Zobacz usługi →
-</a>
-
+<div class="buttons">
+<a class="btn yellow" href="tel:787672404">☎ Zadzwoń: 787 672 404</a>
+<a class="btn outline" href="#kontakt">Darmowa konsultacja</a>
 </div>
 
-<div class="hero-note">
-<span>✓</span>
-Fachowe wykonanie • Bezpieczeństwo • Terminowość
+<div class="hero-info">
+<span>✓ Bezpieczeństwo</span>
+<span>✓ Dokładność</span>
+<span>✓ Terminowość</span>
 </div>
-
 </div>
-
-<div class="hero-visual">
-
-<div class="hero-card">
-
-<div class="card-top">
-<span class="status"></span>
-LUT INSTAL
 </div>
-
-<div class="bolt">⚡</div>
-
-<h3>
-Energia,<br>
-która działa.
-</h3>
-
-<p>
-Nowoczesne rozwiązania elektryczne
-dopasowane do Twoich potrzeb.
-</p>
-
-<div class="card-bottom">
-<span>INSTALACJE</span>
-<strong>230V / 400V</strong>
-</div>
-
-</div>
-
-<div class="float one">
-<strong>✓</strong>
-Bezpieczna<br>
-instalacja
-</div>
-
-<div class="float two">
-<strong>24/7</strong>
-Pomoc<br>
-awaryjna
-</div>
-
-</div>
-
-</div>
-
 </section>
 
-<!-- ZALETY -->
-
 <div class="trust">
-
 <div class="container trust-grid">
-
-<div class="trust-item">
-<strong>01</strong>
-<span>Profesjonalne<br>wykonanie</span>
+<div class="trust-item"><b>⚡ Profesjonalne instalacje</b><small>Domy i firmy</small></div>
+<div class="trust-item"><b>✓ Solidne wykonanie</b><small>Dbałość o szczegóły</small></div>
+<div class="trust-item"><b>🛠 Modernizacje</b><small>Stare i nowe instalacje</small></div>
+<div class="trust-item"><b>☎ Szybki kontakt</b><small>787 672 404</small></div>
+</div>
 </div>
 
-<div class="trust-item">
-<strong>02</strong>
-<span>Bezpieczeństwo<br>instalacji</span>
-</div>
-
-<div class="trust-item">
-<strong>03</strong>
-<span>Terminowa<br>realizacja</span>
-</div>
-
-<div class="trust-item">
-<strong>04</strong>
-<span>Indywidualne<br>podejście</span>
-</div>
-
-</div>
-
-</div>
-
-<!-- USŁUGI -->
-
-<section class="services" id="uslugi">
-
+<section id="uslugi">
 <div class="container">
-
-<div class="section-head">
-
-<div>
-
-<div class="eyebrow">
-<span></span>
-CO ROBIMY
-</div>
-
-<h2>
-Kompleksowe usługi<br>
-<em>elektryczne.</em>
-</h2>
-
-</div>
-
-<p>
-Wykonujemy instalacje elektryczne dla domów,
-mieszkań, lokali oraz obiektów użytkowych.
-</p>
-
+<div class="head">
+<div><div class="kicker">NASZA OFERTA</div><h2>Kompleksowa <span>elektryka.</span></h2></div>
+<p>Od pojedynczego gniazdka po kompletną instalację elektryczną.</p>
 </div>
 
 <div class="services-grid">
 
-<article class="service-card">
-<div class="service-icon">⚡</div>
-<h3>Instalacje elektryczne</h3>
-<p>
-Kompleksowe wykonanie nowych instalacji
-elektrycznych w budynkach i lokalach.
-</p>
-<span>01</span>
-</article>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80" alt="Instalacje elektryczne">
+<div class="card-body"><h3>Instalacje elektryczne</h3><p>Kompleksowe wykonanie instalacji w domach, mieszkaniach i lokalach.</p></div>
+</div>
 
-<article class="service-card">
-<div class="service-icon">🏠</div>
-<h3>Instalacje w domach</h3>
-<p>
-Instalacje dla nowych budynków,
-remontów oraz modernizacji istniejących instalacji.
-</p>
-<span>02</span>
-</article>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1565608087341-404b25492fee?auto=format&fit=crop&w=900&q=80" alt="Modernizacje">
+<div class="card-body"><h3>Modernizacje</h3><p>Wymiana starych instalacji i dostosowanie ich do nowych potrzeb.</p></div>
+</div>
 
-<article class="service-card">
-<div class="service-icon">💡</div>
-<h3>Oświetlenie</h3>
-<p>
-Montaż lamp, opraw, oświetlenia LED
-oraz nowoczesnych systemów sterowania.
-</p>
-<span>03</span>
-</article>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80" alt="Instalacje dla firm">
+<div class="card-body"><h3>Instalacje dla firm</h3><p>Instalacje elektryczne dla biur, lokali i małych firm.</p></div>
+</div>
 
-<article class="service-card">
-<div class="service-icon">🔌</div>
-<h3>Gniazda i zasilanie</h3>
-<p>
-Montaż i rozbudowa gniazd, obwodów
-oraz punktów zasilających.
-</p>
-<span>04</span>
-</article>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80" alt="Oświetlenie">
+<div class="card-body"><h3>Oświetlenie</h3><p>Montaż lamp, LED, opraw i punktów świetlnych.</p></div>
+</div>
 
-<article class="service-card">
-<div class="service-icon">🧰</div>
-<h3>Rozdzielnice</h3>
-<p>
-Montaż, przebudowa i uporządkowanie
-rozdzielnic elektrycznych.
-</p>
-<span>05</span>
-</article>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=900&q=80" alt="Rozdzielnice">
+<div class="card-body"><h3>Rozdzielnice</h3><p>Montaż, przebudowa i uporządkowanie rozdzielnic.</p></div>
+</div>
 
-<article class="service-card">
-<div class="service-icon">🔧</div>
-<h3>Modernizacje</h3>
-<p>
-Wymiana starej instalacji oraz dostosowanie
-jej do obecnych potrzeb.
-</p>
-<span>06</span>
-</article>
-
-<article class="service-card">
-<div class="service-icon">📐</div>
-<h3>Pomiary i sprawdzenia</h3>
-<p>
-Sprawdzenie instalacji i podstawowa diagnostyka
-problemów elektrycznych.
-</p>
-<span>07</span>
-</article>
-
-<article class="service-card">
-<div class="service-icon">🚨</div>
-<h3>Awarie elektryczne</h3>
-<p>
-Pomoc przy nagłych problemach,
-braku zasilania i uszkodzeniach instalacji.
-</p>
-<span>08</span>
-</article>
-
-<article class="service-card">
-<div class="service-icon">🏢</div>
-<h3>Lokale i firmy</h3>
-<p>
-Instalacje oraz modernizacje elektryczne
-dla lokali użytkowych i małych firm.
-</p>
-<span>09</span>
-</article>
-
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=80" alt="Serwis elektryczny">
+<div class="card-body"><h3>Awarie i serwis</h3><p>Diagnostyka problemów oraz pomoc przy awariach instalacji.</p></div>
 </div>
 
 </div>
-
+</div>
 </section>
-
-<!-- O NAS -->
 
 <section class="about" id="onas">
-
 <div class="container about-grid">
 
-<div class="about-visual">
-
-<div class="about-box">
-
-<div class="about-big">LUT</div>
-
-<div class="about-small">INSTAL</div>
-
-<div class="about-line"></div>
-
-<p>USŁUGI ELEKTRYCZNE</p>
-
+<div class="about-photo">
+<img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1100&q=85" alt="Elektryk LUT INSTAL">
 </div>
 
+<div>
+<div class="kicker">O LUT INSTAL</div>
+<h2>Elektryka, której możesz <span>zaufać.</span></h2>
+
+<p>Dobra instalacja elektryczna to bezpieczeństwo, odpowiedni dobór materiałów i dokładne wykonanie.</p>
+<p>Stawiamy na konkretne rozwiązania, porządek pracy, estetykę i trwałość wykonania.</p>
+
+<div class="checks">
+<div>Bezpieczne wykonanie</div>
+<div>Dokładność</div>
+<div>Terminowość</div>
+<div>Estetyka</div>
+<div>Indywidualne podejście</div>
+<div>Dobry kontakt</div>
 </div>
 
-<div class="about-content">
-
-<div class="eyebrow">
-<span></span>
-O LUT INSTAL
+<a class="btn blue" href="tel:787672404">Porozmawiajmy</a>
 </div>
-
-<h2>
-Elektryka wykonana<br>
-<em>tak, jak powinna.</em>
-</h2>
-
-<p>
-Stawiamy na solidność, bezpieczeństwo i estetykę.
-Każdą realizację traktujemy indywidualnie —
-niezależnie od tego, czy chodzi o pojedynczy punkt,
-czy kompletną instalację.
-</p>
-
-<p>
-Zależy nam na rozwiązaniach, które będą działały
-bezproblemowo przez lata, a wykonana instalacja
-będzie przejrzysta i łatwa w późniejszej obsłudze.
-</p>
-
-<div class="about-points">
-
-<div>✓ Dokładne wykonanie</div>
-<div>✓ Dobór odpowiednich rozwiązań</div>
-<div>✓ Estetyka instalacji</div>
-<div>✓ Bezpieczeństwo przede wszystkim</div>
-
 </div>
-
-<a href="#kontakt" class="btn btn-primary">
-Porozmawiajmy o realizacji →
-</a>
-
-</div>
-
-</div>
-
 </section>
-
-<!-- STATYSTYKI -->
 
 <section class="stats">
-
 <div class="container stats-grid">
-
-<div class="stat">
-<strong>100%</strong>
-<span>Zaangażowania<br>w realizację</span>
+<div class="stat"><b>230V</b><small>Instalacje elektryczne</small></div>
+<div class="stat"><b>400V</b><small>Instalacje trójfazowe</small></div>
+<div class="stat"><b>24/7</b><small>Kontakt awaryjny</small></div>
+<div class="stat"><b>100%</b><small>Zaangażowania</small></div>
 </div>
-
-<div class="stat">
-<strong>230V</strong>
-<span>Standardowe<br>instalacje</span>
-</div>
-
-<div class="stat">
-<strong>400V</strong>
-<span>Instalacje<br>trójfazowe</span>
-</div>
-
-<div class="stat">
-<strong>24/7</strong>
-<span>Kontakt<br>awaryjny</span>
-</div>
-
-</div>
-
 </section>
 
-<!-- ZAKRES -->
-
-<section class="scope" id="zakres">
-
+<section id="realizacje">
 <div class="container">
-
-<div class="section-head">
-
+<div class="head">
+<div><div class="kicker
+       <div class="head">
 <div>
-
-<div class="eyebrow">
-<span></span>
-ZAKRES PRAC
+<div class="kicker">REALIZACJE</div>
+<h2>Zobacz <span>naszą pracę.</span></h2>
+</div>
+<p>Przykładowe zdjęcia prac elektrycznych.</p>
 </div>
 
-<h2>
-Od małego punktu<br>
-<em>po kompletną instalację.</em>
-</h2>
+<div class="gallery">
 
-</div>
-
-<p>
-Możesz zgłosić zarówno pojedynczą usterkę,
-jak i zaplanować z nami większą realizację.
-</p>
-
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1200&q=85" alt="Elektryk">
+<div>Profesjonalne prace elektryczne</div>
 </div>
 
-<div class="scope-grid">
-
-<div class="scope-item">
-<div class="scope-check">✓</div>
-<div>
-<strong>Nowe instalacje</strong>
-<span>Domy, mieszkania, lokale</span>
-</div>
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=900&q=80" alt="Montaż">
+<div>Montaż instalacji</div>
 </div>
 
-<div class="scope-item">
-<div class="scope-check">✓</div>
-<div>
-<strong>Remonty instalacji</strong>
-<span>Modernizacja starej elektryki</span>
-</div>
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=80" alt="Serwis">
+<div>Serwis elektryczny</div>
 </div>
 
-<div class="scope-item">
-<div class="scope-check">✓</div>
-<div>
-<strong>Oświetlenie</strong>
-<span>LED, lampy, oprawy</span>
-</div>
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80" alt="Energia">
+<div>Nowoczesne rozwiązania</div>
 </div>
 
-<div class="scope-item">
-<div class="scope-check">✓</div>
-<div>
-<strong>Rozdzielnice</strong>
-<span>Zabezpieczenia i obwody</span>
-</div>
-</div>
-
-<div class="scope-item">
-<div class="scope-check">✓</div>
-<div>
-<strong>Gniazda</strong>
-<span>Montaż i dodatkowe punkty</span>
-</div>
-</div>
-
-<div class="scope-item">
-<div class="scope-check">✓</div>
-<div>
-<strong>Awarie</strong>
-<span>Diagnostyka i usuwanie problemów</span>
-</div>
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80" alt="Biuro">
+<div>Instalacje dla firm</div>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
-<!-- PROCES -->
 
 <section class="process">
 
 <div class="container">
 
-<div class="section-head">
+<div class="head">
 
 <div>
-
-<div class="eyebrow">
-<span></span>
-JAK PRACUJEMY
+<div class="kicker">JAK PRACUJEMY</div>
+<h2>Od telefonu do <span>gotowej instalacji.</span></h2>
 </div>
-
-<h2>
-Prosto od zgłoszenia<br>
-<em>do gotowej instalacji.</em>
-</h2>
-
-</div>
-
-<p>
-Jasne zasady i konkretny kontakt
-na każdym etapie realizacji.
-</p>
 
 </div>
 
 <div class="process-grid">
 
-<div class="process-card">
-<div class="process-number">01</div>
+<div class="step">
+<div class="num">01</div>
 <h3>Kontakt</h3>
+<p>Dzwonisz i opisujesz problem lub zakres prac.</p>
+</div>
+
+<div class="step">
+<div class="num">02</div>
+<h3>Ustalenia</h3>
+<p>Ustalamy zakres i najlepsze rozwiązanie.</p>
+</div>
+
+<div class="step">
+<div class="num">03</div>
+<h3>Realizacja</h3>
+<p>Wykonujemy pracę zgodnie z ustaleniami.</p>
+</div>
+
+<div class="step">
+<div class="num">04</div>
+<h3>Gotowe</h3>
+<p>Sprawdzamy wykonanie i przekazujemy instalację.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section class="why">
+
+<div class="container why-grid">
+
+<div>
+
+<div class="kicker">DLACZEGO LUT INSTAL?</div>
+
+<h2>
+Nie tylko podłączamy.
+<span>Robimy to dobrze.</span>
+</h2>
+
 <p>
-Dzwonisz lub piszesz i opisujesz,
-czego potrzeb
+W elektryce liczą się szczegóły.
+Dlatego stawiamy na bezpieczeństwo,
+estetykę i dokładność.
+</p>
+
+</div>
+
+<div class="why-list">
+
+<div class="why-item">
+<h3>✓ Bezpieczeństwo</h3>
+<p>
+Instalacje wykonujemy z naciskiem
+na prawidłowość i bezpieczeństwo.
+</p>
+</div>
+
+<div class="why-item">
+<h3>⚡ Nowoczesne rozwiązania</h3>
+<p>
+Dobieramy rozwiązania do budynku
+i potrzeb klienta.
+</p>
+</div>
+
+<div class="why-item">
+<h3>🛠 Dokładność</h3>
+<p>
+Dbamy o szczegóły i estetykę wykonania.
+</p>
+</div>
+
+<div class="why-item">
+<h3>☎ Dobry kontakt</h3>
+<p>
+Łatwo skontaktujesz się z nami
+telefonicznie.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section id="opinie">
+
+<div class="container">
+
+<div class="head">
+
+<div>
+<div class="kicker">OPINIE</div>
+<h2>Dobra robota <span>mówi sama za siebie.</span></h2>
+</div>
+
+</div>
+
+<div class="reviews-grid">
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+„Bardzo dobry kontakt i sprawna realizacja.
+Wszystko wykonane dokładnie i zgodnie z ustaleniami.”
+</p>
+
+<b>Marek</b>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+„Szybka pomoc przy problemie z instalacją.
+Fachowe podejście i porządek po pracy.”
+</p>
+
+<b>Kamil</b>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+„Polecam. Dobry kontakt, konkretne ustalenia
+i bardzo dobre wykonanie instalacji.”
+</p>
+
+<b>Piotr</b>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section class="faq">
+
+<div class="container">
+
+<div class="head">
+
+<div>
+<div class="kicker">FAQ</div>
+<h2>Najczęściej zadawane <span>pytania.</span></h2>
+</div>
+
+</div>
+
+<div class="faq-list">
+
+<div class="question" onclick="faq(this)">
+Czy wykonujecie małe prace elektryczne?
+<span>+</span>
+</div>
+
+<div class="answer">
+Tak. Możesz zgłosić również pojedyncze gniazdo,
+lampę, punkt zasilania lub inną drobną pracę.
+</div>
+
+
+<div class="question" onclick="faq(this)">
+Czy modernizujecie stare instalacje?
+<span>+</span>
+</div>
+
+<div class="answer">
+Tak. Możemy sprawdzić istniejącą instalację
+i ustalić zakres potrzebnej modernizacji.
+</div>
+
+
+<div class="question" onclick="faq(this)">
+Czy można zgłosić awarię?
+<span>+</span>
+</div>
+
+<div class="answer">
+Tak. Najlepiej skontaktować się telefonicznie
+i dokładnie opisać problem.
+</div>
+
+
+<div class="question" onclick="faq(this)">
+Jak rozpocząć współpracę?
+<span>+</span>
+</div>
+
+<div class="answer">
+Zadzwoń pod 787 672 404 i opowiedz,
+czego potrzebujesz.
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section>
+
+<div class="container">
+
+<div class="cta-box">
+
+<div class="kicker">POTRZEBUJESZ ELEKTRYKA?</div>
+
+<h2>
+Masz instalację do wykonania?
+<br>
+<span>Porozmawiajmy.</span>
+</h2>
+
+<p>
+Zadzwoń i opowiedz nam, czego potrzebujesz.
+Wspólnie ustalimy najlepsze rozwiązanie.
+</p>
+
+<a class="btn yellow" href="tel:787672404">
+☎ 787 672 404
+</a>
+
+</div>
+</div>
+</section>
+
+
+<section class="contact" id="kontakt">
+
+<div class="container">
+
+<div class="head">
+
+<div>
+<div class="kicker">KONTAKT</div>
+<h2>
+Porozmawiajmy o Twojej
+<span>instalacji.</span>
+</h2>
+</div>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-card">
+
+<h2>
+LUT <span>INSTAL</span>
+</h2>
+
+<p>
+Profesjonalne usługi elektryczne
+dla domów, mieszkań i firm.
+</p>
+
+
+<div class="contact-row">
+<b>☎ Telefon</b>
+<a href="tel:787672404">
+787 672 404
+</a>
+</div>
+
+
+<div class="contact-row">
+<b>⚡ Usługi</b>
+<span>
+Instalacje • Modernizacje • Serwis
+</span>
+</div>
+
+
+<div class="contact-row">
+<b>✓ Kontakt</b>
+<span>
+Zadzwoń i opisz zakres prac
+</span>
+</div>
+
+</div>
+
+
+<div class="contact-dark">
+
+<h2 style="color:#fff">
+Masz pytanie?
+</h2>
+
+<p>
+Nie musisz znać technicznych szczegółów.
+Opowiedz nam, czego potrzebujesz.
+</p>
+
+<a class="phone" href="tel:787672404">
+☎ 787 672 404
+</a>
+
+<a class="btn blue" href="tel:787672404">
+Zadzwoń teraz
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<footer>
+
+<div class="container footer">
+
+<b>
+LUT <span style="color:#ffbd22">INSTAL</span>
+</b>
+
+<small>
+© 2026 LUT INSTAL — Usługi elektryczne
+</small>
+
+<a href="#start">
+↑ Do góry
+</a>
+
+</div>
+
+</footer>
+
+
+<script>
+
+function menu(){
+
+var x=document.getElementById("mobile");
+
+x.style.display =
+x.style.display==="block"
+? "none"
+: "block";
+
+}
+
+
+function faq(el){
+
+var a=el.nextElementSibling;
+
+a.style.display =
+a.style.display==="block"
+? "none"
+: "block";
+
+}
+
+
+document
+.querySelectorAll("#mobile a")
+.forEach(function(a){
+
+a.onclick=function(){
+
+document.getElementById("mobile").style.display="none";
+
+};
+
+});
+
+</script>
+
+</body>
+</html>
